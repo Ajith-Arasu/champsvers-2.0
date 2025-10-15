@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+echo "🔥 Husky pre-commit is running!" >&2
+
+# Run lint-staged
+npx lint-staged
