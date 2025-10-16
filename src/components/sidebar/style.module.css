@@ -1,0 +1,17 @@
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #8b1fa9, #3e065f);
+  color: white;
+  padding: 20px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin: 10px 0;
+}
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
