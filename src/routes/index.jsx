@@ -8,8 +8,6 @@ const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<App />}>
-          {' '}
-          {/* ✅ Layout Wrapper */}
           <Route path="/" element={<Home />} />
           <Route path="/latestwork" element={<LatestWork />} />
         </Route>
