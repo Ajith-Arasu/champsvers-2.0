@@ -49,3 +49,10 @@ body {
   font-weight: 300;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "SfCompact";
+  src: url("../src/assets/font/sf-compact-display-medium.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

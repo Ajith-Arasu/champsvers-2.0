@@ -6,6 +6,72 @@
   padding: 0 1rem;
   color: white;
 }
+
 .logo {
-    width: 10rem;
+  width: 10rem;
+}
+
+/* User dropdown container */
+.userWrapper {
+  position: relative;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+/* Avatar + name (hover trigger) */
+.userTrigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+/* Avatar style */
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/* Username text */
+.username {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'SfCompact';
+}
+
+/* Dropdown panel */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  /* Ensures it's directly attached below */
+  right: 0;
+  background: #222;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  min-width: 8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+/* Keep dropdown open when hovering down */
+.userWrapper:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dropdown Items */
+.dropdownItem {
+  padding: 0.5rem 1rem;
+  font-size: 13px;
+  cursor: pointer;
+    font-family: 'SfCompact';
+
+}
+
+.dropdownItem:hover {
+  background: #333;
 }
