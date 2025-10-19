@@ -1,0 +1,41 @@
+.background {
+    background-image: url("../../assets/images/background.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlayBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+    backdrop-filter: blur(8px);
+    width: 70%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.title {
+    color: white;
+    font-size: 3rem;
+    font-family: 'BarlowCondensed';
+    font-weight: 300;
+}
+.gamified{
+    font-weight: 600;
+    text-transform: uppercase;
+     font-family: 'Bangers';
+     letter-spacing: 0.5rem;
+}
