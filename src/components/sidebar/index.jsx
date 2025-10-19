@@ -6,10 +6,10 @@ const Sidebar = () => {
     <div className={styles.sidebar}>
       <ul className={styles.menu}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/dashboard">Home</Link>
         </li>
         <li>
-          <Link to="/latest-works">Latest Works</Link>
+          <Link to="/latestwork">Latest Works</Link>
         </li>
         <li>
           <Link to="/students">Students</Link>
