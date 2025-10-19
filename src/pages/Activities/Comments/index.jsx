@@ -1,5 +1,5 @@
 import './style.module.css';
 
-const Component = () => <div>Home Page</div>;
+const Component = () => <div>Comments Page</div>;
 
 export default Component;
