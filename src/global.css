@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: "BarlowCondensed";
+  src: url("../src/assets/font/BarlowCondensed-Light.ttf") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+/* not used yet */
+@font-face {
+  font-family: "BarlowCondensed";
+  src: url("../src/assets/font/BarlowCondensed-Regular.woff") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+/* not used yet */
+@font-face {
+  font-family: "BarlowCondensed";
+  src: url("../src/assets/font/BarlowCondensed-Bold.ttf") format("truetype");
+  font-weight: 600; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bangers";
+  src: url("../src/assets/font/Bangers-Regular.ttf") format("truetype");
+  font-weight: 400; /* Bold */
+  font-style: normal;
+}
+
