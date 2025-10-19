@@ -38,14 +38,17 @@
 }
 
 .menu a:hover {
-  color: #FFC107;
+  color: #FF9E01;
 }
 
 .submenu ul {
   list-style: none;
-  padding-left: 20px;
+  padding-left: 20px; 
   margin-top: 8px;
   font-weight: 300;
   font-family: 'Heavitas';
-  font-size: 12px;
+  font-size: 11px;
+}
+.active {
+  color: #FF9E01 !important;
 }

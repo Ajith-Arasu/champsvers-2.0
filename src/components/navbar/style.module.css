@@ -1,5 +1,5 @@
 .navbar {
-  height: 4rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,5 +7,5 @@
   color: white;
 }
 .logo {
-    width: 150px;
+    width: 10rem;
 }
