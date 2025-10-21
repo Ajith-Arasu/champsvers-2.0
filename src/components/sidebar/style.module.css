@@ -1,0 +1,54 @@
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar {
+  padding: 20px;
+  width: 15%;
+  background: linear-gradient(78.47deg, rgba(252, 53, 97, 0.4) -7.11%, rgba(150, 32, 58, 0.4) 107.74%);
+  border-radius: 2rem;
+  color: white;
+  font-weight: 300;
+  font-family: 'Heavitas';
+  font-size: 11px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 15px 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #FF9E01;
+}
+
+.submenu ul {
+  list-style: none;
+  padding-left: 20px; 
+  margin-top: 8px;
+  font-weight: 300;
+  font-family: 'Heavitas';
+  font-size: 11px;
+}
+.active {
+  color: #FF9E01 !important;
+}
