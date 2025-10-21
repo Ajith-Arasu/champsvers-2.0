@@ -1,0 +1,104 @@
+.summarycard {
+  width: 320px;
+  height:183px;
+  top:282px;
+  left:490px;
+  border-radius: 40px;
+  background: linear-gradient(#DADCE0,#16183A);
+  font-family: 'Heavitas';
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap:45px;
+  justify-content: center;
+  align-items: center;
+  line-height: 100%;
+  }
+.card_value {
+    font-family: 'Heavitas';
+    font-weight: 400;
+    font-style:normal;
+    font-size: 70px;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    align-items: center;
+    color:#FFFFFF;
+    text-align: center;
+        }
+
+.card_text {
+  font-family: 'Heavitas';
+    font-weight: 400;
+    font-size: 25px;
+    font-style:normal;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    align-items: center;
+    color:#FFFFFF;
+    }
+.showcase_card{
+  width:158px;
+  height:178px;
+  left:490px;
+  border-radius: 40px;
+  background: linear-gradient(#DADCE0,#16183A);
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  text-align: center;
+  padding: 10px;
+  line-height: 100%;
+
+}
+
+.showcase_card .card_value{
+ font-family: 'Heavitas';
+font-weight: 400;
+font-style: Regular;
+font-size: 40px;
+line-height: 100%;
+letter-spacing: 0px;
+margin-bottom: 0;
+text-align: center;
+align-items: center;
+vertical-align: middle;
+color:#FFFFFF;
+}
+
+.showcase_card .card_text{
+font-family: 'Heavitas';
+font-weight: 400;
+color: #C3C3CE;
+font-style: Regular;
+font-size: 25px;
+line-height: 100%;
+letter-spacing: 0px;
+text-align: center;
+vertical-align: middle;
+
+}
+.showcase_statcard{
+  width:365px;
+  height:168px;
+  left:490px;
+  border-radius: 40px;
+  background: linear-gradient(#DADCE0,#16183A);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:0;
+  align-items: center;
+}
+
+.showcase_statcard p{
+ font-family: 'Heavitas';
+font-weight: 400;
+color:#FFFFFF;
+font-style: Regular;
+font-size: 40px;
+line-height: 100%;
+letter-spacing: 0px;
+text-align: center;
+vertical-align: middle;
+}

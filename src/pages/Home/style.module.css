@@ -1,0 +1,57 @@
+
+.homepage{
+  width:1211px;
+  height:735px;
+  top:95px;
+  left:356px;
+  border-radius:50px;
+  background: linear-gradient(#818286, #000000);
+  padding:20px;
+}
+.hometext {
+  position:relative;
+  font-family: 'Heavitas';
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #f4f4f4;
+  text-align: left;
+  margin-bottom: 8.11px;
+  display: inline-block;
+  padding: 20px 20px 10px 20px;
+}
+.hometext::after {
+  content: "";
+  position: absolute;
+  left: 20px;              
+  bottom: 0;
+  height: 0.5px;
+  width: 740%;           
+  max-width: 1200px;     
+  background-color: #FFFFFF;
+}
+.activity_panel{
+  display:flex;
+  flex-direction: column;
+  gap:30px;
+  margin-top: 50px;
+}
+.summary_section
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  justify-items: center; 
+  padding:5px;
+}
+.showcase_section {
+  display:flex;
+  gap:20px;
+  grid-template-columns: repeat(5, 224px) 482px;
+  justify-items: center; 
+  padding:15px;
+  
+}
+
+
