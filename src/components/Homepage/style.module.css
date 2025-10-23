@@ -1,35 +1,28 @@
 .summarycard {
-  width: 320px;
-  height:183px;
-  top:282px;
-  left:490px;
+  width:40%;
+  height:auto;  
   border-radius: 40px;
-  background: linear-gradient(#DADCE0,#16183A);
+   background: linear-gradient(rgba(129,130,134,0.4)0%, rgba(0,0,0,0.4)100%);
   font-family: 'Heavitas';
-  padding: 20px;
+  padding: 60px 0px;
   display: flex;
   flex-direction: column;
-  gap:45px;
+  gap:0.5rem;
   justify-content: center;
   align-items: center;
-  line-height: 100%;
   }
-.card_value {
+.summarycard .card_value {
     font-family: 'Heavitas';
     font-weight: 400;
-    font-style:normal;
-    font-size: 70px;
-    letter-spacing: 0px;
-    vertical-align: middle;
+    font-size: 45px;
     align-items: center;
     color:#FFFFFF;
     text-align: center;
-        }
-
-.card_text {
-  font-family: 'Heavitas';
+ } 
+.summarycard .card_text {
+    font-family: 'Heavitas';
     font-weight: 400;
-    font-size: 25px;
+    font-size: 18px;
     font-style:normal;
     letter-spacing: 0px;
     vertical-align: middle;
@@ -37,68 +30,46 @@
     color:#FFFFFF;
     }
 .showcase_card{
-  width:158px;
-  height:178px;
-  left:490px;
+  width:15%;
+  height:auto;
   border-radius: 40px;
-  background: linear-gradient(#DADCE0,#16183A);
+  background: linear-gradient(rgba(129,130,134,0.4)0%, rgba(0,0,0,0.4)100%);
   display: flex;
   flex-direction: column;
-  gap:15px;
+  gap:0.5rem;
   text-align: center;
-  padding: 10px;
-  line-height: 100%;
-
+  padding:60px 0px;
 }
-
 .showcase_card .card_value{
- font-family: 'Heavitas';
+font-family: 'Heavitas';
 font-weight: 400;
-font-style: Regular;
-font-size: 40px;
-line-height: 100%;
-letter-spacing: 0px;
-margin-bottom: 0;
+font-size: 26px;
 text-align: center;
 align-items: center;
-vertical-align: middle;
 color:#FFFFFF;
 }
-
 .showcase_card .card_text{
 font-family: 'Heavitas';
 font-weight: 400;
 color: #C3C3CE;
 font-style: Regular;
-font-size: 25px;
-line-height: 100%;
-letter-spacing: 0px;
+font-size: 16px;
 text-align: center;
 vertical-align: middle;
-
 }
 .showcase_statcard{
-  width:365px;
-  height:168px;
-  left:490px;
+  width:30%;
+  height:auto;
   border-radius: 40px;
-  background: linear-gradient(#DADCE0,#16183A);
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(rgba(129,130,134,0.4)0%, rgba(0,0,0,0.4)100%);
+  padding: 50px 15px;
   justify-content: center;
-  gap:0;
   align-items: center;
 }
-
 .showcase_statcard p{
  font-family: 'Heavitas';
 font-weight: 400;
 color:#FFFFFF;
-font-style: Regular;
-font-size: 40px;
-line-height: 100%;
-letter-spacing: 0px;
+font-size: 26px;
 text-align: center;
-vertical-align: middle;
 }
