@@ -25,4 +25,6 @@ const Home = () => {
   );
 };
 
-export default Home;
+const Component = () => <div>Home Page</div>;
+
+export default Component;
