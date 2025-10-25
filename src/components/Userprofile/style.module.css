@@ -1,0 +1,138 @@
+.student_profile{
+    width:375px;
+    height:auto;
+    border:1px #FFFFFF;
+    background: #D9D9D929;
+    opacity:16px;
+    padding: 10px;
+    border-radius: 40px;
+}
+.profile_menu{
+   padding:5px;
+}
+.profile_details{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+.user_profile{
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    padding:10px 20px 0px;
+}
+.user_image{
+    width:85px;
+    height:85px;
+    border:1px #FFFFFF;
+    background: linear-gradient(180deg, rgba(143, 145, 179, 0.5) 0%, rgba(230, 231, 242, 0.5) 100%);
+    padding:15px;
+    border-radius: 80px;
+}
+.user_info{
+    text-align: center;
+    justify-content: center;
+    padding:20px 0px 0px;
+}
+.user_name{
+    font-family: Heavitas;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center; 
+    margin-bottom: 0;
+    color: #FFFFFF;
+}
+.user_tag{
+    font-family: Heavitas;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0;
+    color: #FFFFFF;
+}
+.activity_score{
+    font-family: Heavitas;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    color: #FEE400;
+}
+.student_details{
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+    gap:10px;
+    justify-content: center;
+}
+.student_info{
+    display:flex;
+    gap:10px;
+     }
+.info_box{
+    display:flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.16) 0%, rgba(31, 30, 30, 0.16) 100%);
+    border-radius: 20px;
+    padding: 0px 20px 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+.info_value{
+    font-family: Heavitas;
+    font-weight: 300;
+    font-size: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.info_label{
+    font-family: Heavitas;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: #C3C3CE;
+}
+.student_skill{
+    background: #C9B6B64D;  
+    opacity:30%;
+    border-radius: 30px;
+    padding: 20px 10px;
+    justify-content: center;
+    text-align: left;
+}
+.skill_text{
+    font-family: Heavitas;
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+.view_btn{
+    width: 140px;
+    height: 30px;
+    border: 1px solid linear-gradient(73.11deg, #FF77A3 6.85%, #7E31E1 20.41%, #9421CD 32.44%); 
+    background: 
+    linear-gradient(78.47deg, rgba(252, 53, 97, 0.4) -7.11%, rgba(150, 32, 58, 0.4) 107.74%), 
+    linear-gradient(73.11deg, #81616b 6.85%, #7E31E1 20.41%, #9421CD 32.44%);
+    border-radius: 11px;
+    backdrop-filter: blur(22px);
+    box-shadow: 0px 4.58px 18.32px 0px #F68D6D33;
+    box-shadow: 0px 3.52px 8.8px 0px rgba(158, 22, 53, 0.25);
+    color: #FFFFFF03;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    padding:3px;
+    margin-top: 40px;
+}
+.viewtext{
+    font-family: Baloo 2;
+    font-weight: 800;
+    font-style: ExtraBold;
+    font-size: 16px;
+    text-align: center;
+    color:#FFFFFF;
+
+}
