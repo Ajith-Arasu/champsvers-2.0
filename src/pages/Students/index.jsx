@@ -4,7 +4,7 @@ import styles from './style.module.css';
 const Students = () => {
   return( 
     <div className={styles.studentspage}>           
-      <div className={styles.title}>Students Page</div>
+      <div className={styles.title}>Students</div>
       <div className={styles.studentdetails}>
         <span className={styles.searchtext}>Search</span>
         <div className={styles.searchcontainer}>
