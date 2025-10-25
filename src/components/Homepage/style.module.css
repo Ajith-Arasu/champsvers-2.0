@@ -2,7 +2,7 @@
   width:40%;
   height:auto;  
   border-radius: 40px;
-   background: linear-gradient(rgba(129,130,134,0.4)0%, rgba(0,0,0,0.4)100%);
+  background: linear-gradient(rgba(129,130,134,0.4)0%, rgba(0,0,0,0.4)100%);
   font-family: 'Heavitas';
   padding: 60px 0px;
   display: flex;
@@ -62,12 +62,12 @@ vertical-align: middle;
   height:auto;
   border-radius: 40px;
   background: linear-gradient(rgba(129,130,134,0.4)0%, rgba(0,0,0,0.4)100%);
-  padding: 50px 15px;
+  padding: 60px 15px;
   justify-content: center;
   align-items: center;
 }
 .showcase_statcard p{
- font-family: 'Heavitas';
+font-family: 'Heavitas';
 font-weight: 400;
 color:#FFFFFF;
 font-size: 26px;
