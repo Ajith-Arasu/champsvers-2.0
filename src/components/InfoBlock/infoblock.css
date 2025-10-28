@@ -1,0 +1,26 @@
+.info_box{
+    display:flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.16) 0%, rgba(31, 30, 30, 0.16) 100%);
+    border-radius: 20px;
+    padding: 0px 20px 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+.info_value{
+    font-family: Heavitas;
+    font-weight: 300;
+    font-size: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.info_label{
+    font-family: Heavitas;
+    font-weight: 400;s
+    font-size: 12px;
+    text-align: center;
+    color: #C3C3CE;
+}

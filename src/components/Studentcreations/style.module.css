@@ -1,0 +1,13 @@
+.student_creations{
+  width:100%;
+  display:flex;
+  gap:25px;
+  flex-wrap: wrap;
+  }
+.image_gallery{
+  width:80%;
+  max-width: 80%;
+  height:auto;
+  object-fit: contain;
+  border:30px;
+}
