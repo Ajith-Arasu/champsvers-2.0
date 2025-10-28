@@ -184,7 +184,7 @@
   flex-direction: column;
   background: linear-gradient(180deg, rgba(217, 217, 217, 0.16) 0%, rgba(31, 30, 30, 0.16) 100%);
   border-radius: 25px;
-  padding: 10px 8px 30px;
+  padding: 5px 8px 25px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -205,19 +205,7 @@
   text-align: center;
   color: #C3C3CE;
 }
-.student_creations{
-  width:100%;
-  display:flex;
-  gap:25px;
-  flex-wrap: wrap;
-  }
-.image_gallery{
-  width:80%;
-  max-width: 80%;
-  height:auto;
-  object-fit: contain;
-  border:30px;
-}
+
 /*studentprofile*/
 
     
