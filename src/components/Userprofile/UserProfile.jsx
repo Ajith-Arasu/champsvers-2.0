@@ -11,7 +11,7 @@ const UserProfile = () => {
       </div>
       <div className={styles.profile_details}>
         <div className={styles.user_profile}>
-          <img className={styles.user_image} src={userimg} alt="userimage"></img>
+          <img className={styles.user_image} src={userimg} alt="userimage"/>
           <div className={styles.user_info}>
             <p className={styles.user_name}>BILLY JOE</p>
             <span className={styles.user_tag}>@ Billy</span>

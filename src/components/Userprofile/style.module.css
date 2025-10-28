@@ -126,6 +126,10 @@
     margin:auto;
     padding:3px;
     margin-top: 40px;
+    cursor: pointer;
+}
+.button{
+    border:none
 }
 .viewtext{
     font-family: Baloo 2;

@@ -5,7 +5,7 @@ const Students = () => {
   return( 
     <div className={styles.studentspage}>           
       <div className={styles.title}>Students</div>
-      <div className={styles.studentdetails}>
+      <div className={styles.userdetails}>
         <span className={styles.searchtext}>Search</span>
         <div className={styles.searchcontainer}>
           <div className={styles.searchbar}></div>
@@ -38,3 +38,4 @@ const Students = () => {
 };
 
 export default Students;
+

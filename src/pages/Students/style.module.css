@@ -1,7 +1,6 @@
-
 .studentspage{
   border-radius:50px;
-  padding:10px;
+  padding:10px 10px 0px;
 }
 .title {
   position:relative;
@@ -24,7 +23,8 @@
   background-color: #FFFFFF;
   opacity:30%;
 }
-.studentdetails{
+
+.userdetails{
     display:flex;
     padding:60px 60px 0px;
     flex-direction: row;
@@ -41,17 +41,18 @@
     width:520px;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap:10px;
 
 }
 .searchbar{
     width:280px;
-    height:40px;
+    padding:20px 10px;
     border-radius: 20px;
     background-color: #c9B6B6;
-    opacity:30%;
+    opacity:0.3;
+  
 }
 .studentnames{
     padding:10px 0px 0px;
@@ -65,5 +66,159 @@
     line-height: 1.3rem;
     text-align: left;
 }
+
+/*studentdetails*/
+.studentdetails{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  padding: 10px 0px 0px;
+}
+.score_card{
+  width:92%;
+  padding:10px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:20px;
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0.16) 0%, rgba(31, 30, 30, 0.16) 100%);
+}
+.user_activity{
+  display:flex;
+  align-items: center;
+  gap:30px;
+}
+.user_info{
+  padding:0px 10px;
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+  justify-content: center;
+  font-family: Heavitas;
+  font-weight: 300;
+  font-size: 15px;
+  color: #FFFFFF;
+  align-items: center;
+}
+.user_image{
+  width:75px;
+  height:75px;
+  border:1px #FFFFFF;
+  background: linear-gradient(180deg, rgba(143, 145, 179, 0.5) 0%, rgba(230, 231, 242, 0.5) 100%);
+  padding:13px;
+  border-radius: 80px;
+  align-items: center;
+}
+.activity_panel{
+  padding:0px 20px;
+  font-family: Heavitas;
+  font-weight: 300;
+  font-size: 11px;
+  color: #FFFFFF;
+  line-height: 1.2rem;
+} 
+.reward_badge{
+  display: flex;
+  padding:20px 10px;
+  justify-content: center;
+  align-items: center;
+}
+.coins{
+  display: flex;
+  gap:10px;
+  justify-content: center;
+  align-items:flex-start;
+}
+.coin_circle{
+  width:45px;
+  height:46px;
+  border-radius: 40px;
+  background: 
+    linear-gradient(rgba(217, 217, 217, 0.16), rgba(217, 217, 217, 0.16)) padding-box, 
+    linear-gradient(202.28deg, #7D4702 7.32%, #FDD265 37.24%, #683E08 67.64%) border-box;
+  border: 1px solid transparent;
+}
+.coins_collection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.coin_tiles{
+  width:100%;
+  display: flex;
+  gap:5px;
+  justify-content: center;
+  align-items: center;
+}
+.coin_rectangle{
+  width:35px;
+  height:41px;
+  border-radius:10px;
+  border: 1px solid;
+  border-image: linear-gradient(202.28deg, #7D4702 7.32%, #FDD265 37.24%, #683E08 67.64%);
+  border-image-slice: 1;
+  background: rgba(217, 217, 217, 0.16);
+}
+.coins_label{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 15px;
+  text-align: center;
+  color: #0DFE00;
+  width:100%;
+}
+.talent_showcase{
+  padding:0px 10px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  column-gap:15px;
+  row-gap: 0;
+}
+.info_box{
+  width:9%;
+  display:flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0.16) 0%, rgba(31, 30, 30, 0.16) 100%);
+  border-radius: 25px;
+  padding: 10px 8px 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.info_value{  
+  font-family: Heavitas;
+  font-weight: 300;
+  font-size: 25px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+.info_label{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  color: #C3C3CE;
+}
+.student_creations{
+  width:100%;
+  display:flex;
+  gap:25px;
+  flex-wrap: wrap;
+  }
+.image_gallery{
+  width:80%;
+  max-width: 80%;
+  height:auto;
+  object-fit: contain;
+  border:30px;
+}
+/*studentprofile*/
+
     
 

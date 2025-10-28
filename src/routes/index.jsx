@@ -13,6 +13,8 @@ import Comments from '../pages/Activities/Comments';
 import Reactions from '../pages/Activities/Reactions';
 import IntroCard from '../pages/introCard';
 import Page404 from '../pages/Page404';
+import StudentDetails from '../pages/Students/studentdetails';
+import StudentProfile from '../pages/Students/studentprofile';
 
 const AppRoutes = () => {
   return (
@@ -26,6 +28,8 @@ const AppRoutes = () => {
           <Route path="/dashboard" element={<Home />} />
           <Route path="/latestwork" element={<LatestWork />} />
           <Route path="/students" element={<Students />} />
+          <Route path="/students/:id/details" element={<StudentDetails />} />
+          <Route path="/students/:id/profile" element={<StudentProfile />} />
           <Route path="/clans" element={<Clans />} />
           <Route path="/quests" element={<Quests />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
