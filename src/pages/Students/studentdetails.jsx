@@ -4,7 +4,7 @@ import StudentCreations from '../../components/Studentcreations/StudentCreations
 
 const StudentDetails = () => {
   return( 
-    <div className={styles.studentspage}>           
+    <div className={styles.studentspage}>
       <div className={styles.title}>Students</div>
       <div className={styles.studentdetails}>
         <div className={styles.score_card}>

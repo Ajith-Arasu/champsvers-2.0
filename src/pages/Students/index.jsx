@@ -3,7 +3,7 @@ import styles from './style.module.css';
 
 const Students = () => {
   return( 
-    <div className={styles.studentspage}>           
+    <div className={styles.studentspage}>
       <div className={styles.title}>Students</div>
       <div className={styles.userdetails}>
         <span className={styles.searchtext}>Search</span>
