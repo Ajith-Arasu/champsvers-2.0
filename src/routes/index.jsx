@@ -15,6 +15,8 @@ import IntroCard from '../pages/introCard';
 import Page404 from '../pages/Page404';
 import StudentDetails from '../pages/Students/studentdetails';
 import StudentProfile from '../pages/Students/studentprofile';
+import ClanDetails from '../pages/Clans/clandetails';
+import AddClan from '../pages/Clans/addclan';
 
 const AppRoutes = () => {
   return (
@@ -31,6 +33,8 @@ const AppRoutes = () => {
           <Route path="/students/:id/details" element={<StudentDetails />} />
           <Route path="/students/:id/profile" element={<StudentProfile />} />
           <Route path="/clans" element={<Clans />} />
+          <Route path="/clans/:id/details" element={<ClanDetails />} />
+          <Route path="/clans/:id/addclan" element={<AddClan />} />
           <Route path="/quests" element={<Quests />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/settings" element={<Settings />} />
