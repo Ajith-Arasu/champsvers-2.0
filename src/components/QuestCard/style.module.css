@@ -1,0 +1,42 @@
+.questcard{
+  display: flex;
+  flex-direction: column;
+  padding:10px;
+  border-radius: 30px;
+  background: #D9D9D929;
+  box-shadow: 0px 7px 10px 4px #0000001A;
+}
+.quest_image{
+  width:190px;
+  height:135px;
+  border:1px solid #FFFFFF;
+  border-radius: 30px;
+}
+.card_details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.card_title{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  color:#FFFFFF;
+  font-family: Heavitas;
+  font-weight: 400;
+  font-size: 12px;
+  padding-top:3px;
+  box-shadow: 1.08px 2.16px 8.64px 0px rgba(0, 0, 0, 0.25);
+}
+.card_description{
+  width:180px;
+  overflow-wrap: break-word;
+  font-family: BeVietnam;
+  font-weight: 400;
+  font-size: 7px;
+  line-height:2.6;
+  text-align: justify;
+  margin-top: 3px;
+  color: #FFFFFF;
+}
