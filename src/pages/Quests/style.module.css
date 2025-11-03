@@ -39,4 +39,56 @@
   top:30px;
 }
 
+/*questcreation*/
+.quest_creation{
+  display:flex;
+  gap:20px;
+  padding-top: 40px;
+  padding-right: 60px;
+  align-items: flex-start;
+}
+.quest_details{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+.form_group{
+  display:flex;
+  gap:60px;
+}
+.form_button{
+  display:flex;
+  justify-content:center;
+  width:900px;
+}
+.quest_preview{
+  display: flex;
+  gap:20px;
+  flex-direction: column;
+  justify-content: left;
+  margin-bottom: 40px;
+}
+.text_preview{
+  font-family: BeVietnam;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  text-align: justify;
+  color:#FFFFFF;
+  box-shadow: 1.08px 2.16px 8.64px 0px rgba(0, 0, 0, 0.25);
+
+}
+.quest_card{
+  padding-top:40px;
+}
+input,textarea::placeholder{
+  text-align: left;
+}
+.points{
+  display:flex;
+  flex-direction: column;
+}
+
+
+
 
