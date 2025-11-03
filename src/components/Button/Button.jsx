@@ -1,11 +1,10 @@
-import React from 'react'
-import styles from './Button.css';
+import styles from './style.module.css';
 
-const Button = () => {
+const Button = (props) => {
   return (
-    <div className={styles.view_btn}>
-      <p className={styles.viewtext}>View Details</p>
-    </div>
+    <button className={styles.save_btn}>
+                 <span className={styles.savetext}>{props.label}</span>
+               </button>
   )
 }
 
