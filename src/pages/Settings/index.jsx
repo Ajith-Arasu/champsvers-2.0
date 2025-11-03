@@ -1,5 +1,27 @@
-import './style.module.css';
+import React from 'react';
+import styles from './style.module.css';
+import Button from '../../components/Button/Button';
 
-const Component = () => <div>Settings Page</div>;
-
-export default Component;
+const Settings = () => {
+  return(
+    <div className={styles.settingspage}>
+      <div className={styles.title}>SETTINGS | CHANGE CODE</div>
+      <div className={styles.settings_code}>
+        <form className={styles.settings_form}>
+          <div className={styles.form_layout}>
+            <label>CURRENT CODE</label>
+            <input type="text" placeholder="ABCD-353-FRSD" name="currentcode" />
+          </div>
+          <div className={styles.form_layout}>
+            <label>NEW CODE</label>
+            <input type="text" placeholder="FLXE-999-FDFG" name="newcode" />
+          </div>
+          <div className={styles.form_button}>
+            <Button label="SAVE"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+export default Settings;
