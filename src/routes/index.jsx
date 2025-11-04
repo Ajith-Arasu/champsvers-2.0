@@ -17,6 +17,7 @@ import StudentDetails from '../pages/Students/studentdetails';
 import StudentProfile from '../pages/Students/studentprofile';
 import ClanDetails from '../pages/Clans/clandetails';
 import AddClan from '../pages/Clans/addclan';
+import QuestCreation from '../pages/Quests/questcreation';
 
 const AppRoutes = () => {
   return (
@@ -36,6 +37,7 @@ const AppRoutes = () => {
           <Route path="/clans/:id/details" element={<ClanDetails />} />
           <Route path="/clans/:id/addclan" element={<AddClan />} />
           <Route path="/quests" element={<Quests />} />
+          <Route path="/quests/:id/questcreation" element={<QuestCreation />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/activities/comments" element={<Comments />} />
