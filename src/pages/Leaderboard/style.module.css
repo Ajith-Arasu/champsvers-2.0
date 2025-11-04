@@ -1,1 +1,93 @@
-.container { padding: 20px; }
+.settingspage{
+  border-radius:50px;
+  padding:10px 10px 0px;
+ 
+}
+.title {
+  position:relative;
+  font-family: 'Heavitas';
+  font-weight: 400;
+  font-size: 24px;
+  color: #f4f4f4;
+  text-align: left;
+  display: inline-block;
+  padding: 0px 20px 10px 5px;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  left: 5px;              
+  bottom: 0;
+  height: 0.5px;
+  width: 72rem;           
+  max-width: 1200px;     
+  background-color: #FFFFFF;
+  opacity:30%;
+}
+.settings_code{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+.settings_form{
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+  padding:30px 20px 0px;
+}
+.form_layout{
+  display:flex;
+  gap: 60px;
+  align-items:center;
+}
+.form_layout label{
+  width:150px;
+  height:50px;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  padding:10px;
+  align-items: center;
+}
+.form_layout input{
+  width:250px;
+  height:50px;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  padding:10px;
+  align-items: center;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.form_layout input::placeholder{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  text-align: right;
+  color: #FFFFFF;
+}
+.settings_button{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  margin-left: 220px;
+
+}
+.first_row{
+  display: flex;
+  gap:15px;
+}
+.second_row{
+  display: flex;
+  gap:15px;
+}
+
+
+
