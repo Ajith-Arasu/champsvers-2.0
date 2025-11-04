@@ -41,7 +41,7 @@ const UserProfile = () => {
         </div>
       </div>
       <div className={styles.view_btn}>
-        <p className={styles.viewtext}>View Details</p>
+        <span className={styles.viewtext}>View Details</span>
       </div>
     </div>
   );

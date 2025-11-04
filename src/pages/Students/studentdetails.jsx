@@ -1,6 +1,7 @@
 import styles from './style.module.css';
 import userimg from '../../assets/images/Boy.png';
 import StudentCreations from '../../components/Studentcreations/StudentCreations';
+import InfoBlock from '../../components/InfoBlock/InfoBlock';
 
 const StudentDetails = () => {
   return( 
@@ -40,46 +41,16 @@ const StudentDetails = () => {
           </div>
         </div>
         <div className={styles.talent_showcase}>
-          <div className={styles.info_box}>
-            <p className={styles.info_value}>315</p>
-            <span className={styles.info_label}>QUESTS</span>
-          </div>
-          <div className={styles.info_box}>
-            <p className={styles.info_value}>730</p>
-            <span className={styles.info_label}>ARTS</span>
-          </div>
-          <div className={styles.info_box}>
-            <p className={styles.info_value}>34</p>
-            <span className={styles.info_label}>BOOKS</span>
-          </div>
-          <div className={styles.info_box}>
-            <p className={styles.info_value}>20</p>
-            <span className={styles.info_label}>MUSIC</span>
-          </div>
-          <div className={styles.info_box}>
-            <p className={styles.info_value}>23</p>
-            <span className={styles.info_label}>ACHIEVEMENTS</span>
-          </div>
-          <div className={styles.info_box}>
-            <p className={styles.info_value}>16</p>
-            <span className={styles.info_label}>SPORTS</span>
-          </div>
-          <div className={styles.info_box}>
-            <p className={styles.info_value}>16</p>
-            <span className={styles.info_label}>AWARDS</span>
-          </div>
-          <div className={styles.info_box}>
-            <p className={styles.info_value}>16</p>
-            <span className={styles.info_label}>QUIZES</span>
-          </div>
-          <div className={styles.info_box}>
-            <p className={styles.info_value}>26</p>
-            <span className={styles.info_label}>COLLECTIONS</span>
-          </div>
-          <div className={styles.info_box}>
-            <p className={styles.info_value}>18</p>
-            <span className={styles.info_label}>TROPHIES</span>
-          </div> 
+          <InfoBlock value="315" label="QUESTS" />
+          <InfoBlock value="730" label="ARTS" />
+          <InfoBlock value="34" label="BOOKS" />
+          <InfoBlock value="20" label="MUSIC" />
+          <InfoBlock value="23" label="ACHIEVEMENTS" />
+          <InfoBlock value="16" label="SPORTS" />
+          <InfoBlock value="16" label="AWARDS" />
+          <InfoBlock value="16" label="QUIZES" />
+          <InfoBlock value="26" label="COLLECTIONS" />
+          <InfoBlock value="18" label="TROPHIES" />
         </div>
         <StudentCreations/>
       </div>
