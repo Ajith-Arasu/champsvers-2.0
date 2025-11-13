@@ -1,5 +1,46 @@
-import './style.module.css';
+import React from 'react'
+import styles from './style.module.css';
+import RectangleButton from '../../components/RectangleButton/RectangleButton';
 
-const Component = () => <div>Leaderboard Page</div>;
+const LeaderBoard = () => {
+  return (
+    <div className={styles.settingspage}>
+      <div className={styles.title}>LEADERBOARD</div>
+      <div className={styles.settings_code}>
+        <form className={styles.settings_form}>
+          <div className={styles.settings_button}>
+            <div className={styles.first_row}>
+              <RectangleButton label="weekly"/>
+              <RectangleButton label="Monthly"/>
+              <RectangleButton label="yearly"/>
+            </div>
+            <div className={styles.second_row}>
+              <RectangleButton label="Q1"/>
+              <RectangleButton label="Q2"/>
+              <RectangleButton label="Q3"/>
+              <RectangleButton label="Q3"/>
+            </div>
+          </div>
+          <div className={styles.form_layout}>
+            <label>SCA JACUARS</label>
+            <input style={{ width: "330px" }} type="text" placeholder="33,023 pts" name="currentcode" />
+          </div>
+          <div className={styles.form_layout}>
+            <label>SCA PANTHERS</label>
+            <input style={{ width: "250px" }} type="text" name="newcode" />
+          </div>
+          <div className={styles.form_layout}>
+            <label>SCA LEOPARDS</label>
+            <input style={{ width: "290px" }} type="text" name="newcode" />
+          </div>
+          <div className={styles.form_layout}>
+            <label>SCA CHEETAHS</label>
+            <input style={{ width: "390px" }} type="text" name="newcode" />
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
 
-export default Component;
+export default LeaderBoard

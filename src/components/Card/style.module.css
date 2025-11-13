@@ -1,0 +1,41 @@
+.clancard{
+    padding:10px 10px 60px;
+    border-radius:40px;
+    background: #D9D9D929;
+    box-shadow: 0px 7px 10px 4px #0000001A;
+    display:flex;
+    flex-direction: column;
+ }
+.clan_info{
+justify-content: center;
+}
+.clan_img{
+    width:255px;
+    height:170px;
+    border-radius:30px;
+}
+.clan_details{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1.08px 2.16px 8.64px 0px rgba(0, 0, 0, 0.15);
+}
+.clan_name{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 24px;
+  text-align: center;
+  color:#FFFFFF;
+  margin-bottom: 0;
+}
+.clan_value{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  text-align: center;
+  color:#FFFFFF;
+}

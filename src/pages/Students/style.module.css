@@ -25,46 +25,44 @@
 }
 
 .userdetails{
-    display:flex;
-    padding:60px 60px 0px;
-    flex-direction: row;
-    gap:20px;
+  display:flex;
+  padding:60px 60px 0px;
+  flex-direction: row;
+  gap:20px;
 }
 .searchtext{
-    font-family:'SfCompact';
-    font-weight: 900;
-    font-style: heavy;
-    font-size: 22px;
-    color:#F4F4F4;
+  font-family:'SfCompact';
+  font-weight: 900;
+  font-style: heavy;
+  font-size: 22px;
+  color:#F4F4F4;
 }
 .searchcontainer{
-    width:520px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap:10px;
-
+  width:520px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap:10px;
 }
 .searchbar{
-    width:280px;
-    padding:20px 10px;
-    border-radius: 20px;
-    background-color: #c9B6B6;
-    opacity:0.3;
-  
+  width:280px;
+  padding:20px 10px;
+  border-radius: 20px;
+  background-color: #c9B6B6;
+  opacity:0.3;
 }
 .studentnames{
-    padding:10px 0px 0px;
-    margin:0;
-    font-weight: 300;
-    font-family: 'Heavitas';
-    font-size: 15px;
-    color:#FFFFFF;
-    list-style-type:none;
-    text-transform: capitalize;
-    line-height: 1.3rem;
-    text-align: left;
+  padding:10px 0px 0px;
+  margin:0;
+  font-weight: 300;
+  font-family: 'Heavitas';
+  font-size: 15px;
+  color:#FFFFFF;
+  list-style-type:none;
+  text-transform: capitalize;
+  line-height: 1.3rem;
+  text-align: left;
 }
 
 /*studentdetails*/
@@ -72,7 +70,7 @@
   display:flex;
   flex-direction: column;
   gap:10px;
-  padding: 10px 0px 0px;
+  padding: 10px 0px 10px 10px;
 }
 .score_card{
   width:92%;
@@ -171,7 +169,7 @@
   width:100%;
 }
 .talent_showcase{
-  padding:0px 10px;
+  padding-right: 10px;
   display:flex;
   flex-wrap: wrap;
   justify-content: left;
@@ -180,6 +178,7 @@
 }
 .info_box{
   width:9%;
+  height:auto;
   display:flex;
   flex-direction: column;
   background: linear-gradient(180deg, rgba(217, 217, 217, 0.16) 0%, rgba(31, 30, 30, 0.16) 100%);
@@ -206,7 +205,107 @@
   color: #C3C3CE;
 }
 
-/*studentprofile*/
+/*studentform*/
+.student_form{
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+  padding:30px 20px 0px;
+}
+.form_layout{
+  display:flex;
+  gap: 60px;
+  align-items:flex-start;
+}
+label{
+  width:150px;
+  font-family: Heavitas;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 0px 5px 10px 0px;
+  box-shadow: 1.08px 2.16px 8.64px 0px rgba(0, 0, 0, 0.25);
+}
+input, textarea{
+  width:450px;
+  border:none;
+  border-radius: 20px;
+  background: #D9D9D929;
+  padding:10px;
+  text-align: left;
+  align-items: center;
+}
+.grade_section{
+  display: flex;
+  gap:15px;
+}
+.grade_section label{
+  width:auto;
+  text-align: left;
+  padding:0px 5px;
+}
+.grade_section input{
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+.grade_section input::placeholder {
+  text-align: center;
+}
+.grade_input{
+  width:60%;
+}
+.section_input{
+  width:100%;
+}
+.clan_input {
+  text-align: left;
+}
+input::placeholder,
+textarea::placeholder{
+  font-family: Be Vietnam;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  text-align: justify;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding:10px;
+}
+.form_button{
+  display:flex;
+  justify-content:center;
+  width:900px;
+}
+.save_btn{
+  width:140px;
+  height:30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  outline:none;
+  border: 1px solid transparent; 
+  background: 
+    linear-gradient(78.47deg, rgba(252, 53, 97, 0.4) -7.11%, rgba(150, 32, 58, 0.4) 107.74%), 
+    linear-gradient(73.11deg, #81616b 6.85%, #7E31E1 20.41%, #9421CD 32.44%);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  border-radius: 11px;
+  backdrop-filter: blur(22px);
+  box-shadow: 0px 3.52px 8.8px rgba(158, 22, 53, 0.25);
+  color: #FFFFFF;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.savetext{
+  font-family: Baloo 2;
+  font-weight: 800;
+  font-size: 12px;
+  text-align: center;
+  color:#FFFFFF;
+}
 
     
 

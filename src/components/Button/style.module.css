@@ -1,0 +1,29 @@
+.save_btn{
+  width:140px;
+  height:30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  outline:none;
+  border: 1px solid transparent; 
+  background: 
+    linear-gradient(78.47deg, rgba(252, 53, 97, 0.4) -7.11%, rgba(150, 32, 58, 0.4) 107.74%), 
+    linear-gradient(73.11deg, #81616b 6.85%, #7E31E1 20.41%, #9421CD 32.44%);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  border-radius: 11px;
+  backdrop-filter: blur(22px);
+  box-shadow: 0px 3.52px 8.8px rgba(158, 22, 53, 0.25);
+  color: #FFFFFF;
+  margin-top: 40px;
+  cursor: pointer;
+  }
+.savetext{
+  font-family: Baloo 2;
+  font-weight: 800;
+  font-size: 12px;
+  text-align: center;
+  color:#FFFFFF;
+  align-items: center;
+}

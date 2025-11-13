@@ -1,1 +1,192 @@
-.container { padding: 20px; }
+.clanspage{
+  border-radius:50px;
+  padding:10px 10px 0px;
+}
+.title {
+  position:relative;
+  font-family: 'Heavitas';
+  font-weight: 400;
+  font-size: 24px;
+  color: #f4f4f4;
+  text-align: left;
+  display: inline-block;
+  padding: 0px 20px 10px 5px;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  left: 5px;              
+  bottom: 0;
+  height: 0.5px;
+  width: 72rem;           
+  max-width: 1200px;     
+  background-color: #FFFFFF;
+  opacity:30%;
+}
+.clanscard{
+  display: flex;
+  gap:15px;
+  padding:50px 0px 0px 10px;
+}
+
+/*clandetails*/
+.clandetails{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  padding: 10px 0px 10px 10px;
+}
+.score_card{
+  width:92%;
+  padding:10px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:20px;
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0.16) 0%, rgba(31, 30, 30, 0.16) 100%);
+}
+.user_activity{
+  display:flex;
+  align-items: center;
+  gap:30px;
+}
+.clan_info{
+  padding:0px 10px;
+  display: flex;
+  gap:30px;
+  justify-content:center;
+  text-align: center;
+  align-items: center;
+}
+.clan_img{
+  width:205px;
+  height:140px;
+  border-radius:30px;
+}
+.clan_text{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-size: 25px;
+  color: #FFFFFF;
+  text-align: left;
+  padding-bottom:40px;
+}
+p{
+  margin-bottom: 0;
+}
+ .activity_panel{
+  padding:0px 20px;
+  font-family: Heavitas;
+  font-weight: 300;
+  font-size: 11px;
+  color: #FFFFFF;
+  line-height: 1.2rem;
+} 
+.reward_badge{
+  display: flex;
+  padding:20px 10px;
+  justify-content: center;
+  align-items: center;
+}
+.coins{
+  display: flex;
+  gap:10px;
+  justify-content: center;
+  align-items:flex-start;
+}
+.coin_circle{
+  width:45px;
+  height:46px;
+  border-radius: 40px;
+  background: 
+    linear-gradient(rgba(217, 217, 217, 0.16), rgba(217, 217, 217, 0.16)) padding-box, 
+    linear-gradient(202.28deg, #7D4702 7.32%, #FDD265 37.24%, #683E08 67.64%) border-box;
+  border: 1px solid transparent;
+}
+.coins_collection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.coin_tiles{
+  width:100%;
+  display: flex;
+  gap:5px;
+  justify-content: center;
+  align-items: center;
+}
+.coin_rectangle{
+  width:35px;
+  height:41px;
+  border-radius:10px;
+  border: 1px solid;
+  border-image: linear-gradient(202.28deg, #7D4702 7.32%, #FDD265 37.24%, #683E08 67.64%);
+  border-image-slice: 1;
+  background: rgba(217, 217, 217, 0.16);
+}
+.coins_label{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 15px;
+  text-align: center;
+  color: #0DFE00;
+  width:100%;
+}
+.talent_showcase{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  column-gap:15px;
+  padding-right: 10px;
+  row-gap: 0;
+}
+/*Add Clan*/
+.addclanpage{
+  border-radius:50px;
+  padding:0px 10px;
+}
+.title {
+  position:relative;
+  font-family: 'Heavitas';
+  font-weight: 400;
+  font-size: 24px;
+  color: #f4f4f4;
+  text-align: left;
+  display: inline-block;
+  padding: 0px 20px 5px 5px;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  left: 5px;              
+  bottom: 0;
+  height: 0.5px;
+  width: 72rem;           
+  max-width: 1200px;     
+  background-color: #FFFFFF;
+  opacity:30%;
+}
+.clan_new{
+  display:flex;
+  gap:140px;
+  padding-top: 40px;
+  }
+.clan_details{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+.form_group{
+  display:flex;
+  gap:100px;
+}
+.form_button{
+  display:flex;
+  justify-content:center;
+  width:1000px;
+}
+
+

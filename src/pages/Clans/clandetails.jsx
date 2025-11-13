@@ -1,21 +1,21 @@
+import React from 'react';
 import styles from './style.module.css';
-import userimg from '../../assets/images/Boy.png';
+import clanimg from '../../assets/images/clanimage.png';
 import StudentCreations from '../../components/Studentcreations/StudentCreations';
 import InfoBlock from '../../components/InfoBlock/InfoBlock';
 
-const StudentDetails = () => {
-  return( 
-    <div className={styles.studentspage}>
-      <div className={styles.title}>Students</div>
-      <div className={styles.studentdetails}>
+const ClanDetails = () => {
+  return (
+    <div className={styles.clanspage}>
+      <div className={styles.title}>CLAN</div>
+      <div className={styles.clandetails}>
         <div className={styles.score_card}>
           <div className={styles.user_activity}>
-            <div className={styles.user_info}>
-              <img className={styles.user_image} src={userimg} alt="userimage"></img>
-              <div className={styles.student_info}>
-                <p>Billy joe</p>
-                <p>10 YEARS OLD, grade 5</p>
-                <p>SCA PANTHERS</p>
+            <div className={styles.clan_info}>
+              <img className={styles.clan_img} src={clanimg} alt="clanimage" />
+              <div className={styles.clan_text}>
+                <p>SCA</p>
+                <span>JAQUARS</span>
               </div>
             </div>
             <div className={styles.activity_panel}>
@@ -52,10 +52,11 @@ const StudentDetails = () => {
           <InfoBlock value="26" label="COLLECTIONS" />
           <InfoBlock value="18" label="TROPHIES" />
         </div>
-        <StudentCreations/>
+        <StudentCreations />
       </div>
     </div>
-  );
-};
 
-export default StudentDetails;
+  )
+}
+
+export default ClanDetails;
