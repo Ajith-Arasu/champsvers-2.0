@@ -12,7 +12,7 @@
   display: inline-block;
   padding: 0px 20px 10px 5px;
 }
-.title::after {
+/*.title::after {
   content: "";
   position: absolute;
   left: 5px;              
@@ -22,8 +22,7 @@
   max-width: 1200px;     
   background-color: #FFFFFF;
   opacity:30%;
-}
-
+}*/
 .userdetails{
   display:flex;
   padding:60px 60px 0px;
@@ -64,7 +63,6 @@
   line-height: 1.3rem;
   text-align: left;
 }
-
 /*studentdetails*/
 .studentdetails{
   display:flex;
@@ -204,7 +202,6 @@
   text-align: center;
   color: #C3C3CE;
 }
-
 /*studentform*/
 .student_form{
   display:flex;
@@ -306,6 +303,104 @@ textarea::placeholder{
   text-align: center;
   color:#FFFFFF;
 }
+@media (max-width: 768px) {
+  .title {
+    font-size: 18px;
+  }
+  .userdetails {
+    padding: 20px 10px 0px;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .searchtext {
+    font-size: 18px;
+  }
+  .searchcontainer {
+    width: 100%;
+    align-items: center;
+  }
+  .searchbar {
+    width: 90%;
+    padding: 15px;
+  }
+  .studentdetails {
+    padding: 0px;
+    align-items: center;
+  }
+  .score_card {
+    flex-direction: column; 
+    gap: 15px;
+    width: 100%;
+  }
+  .user_activity {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .user_info {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 13px;
+  }
+  .user_image {
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+  }
+  .activity_panel {
+    font-size: 10px;
+    padding: 0;
+  }
+  .coins {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .info_box {
+    width: 28%;      
+    padding: 5px 8px 15px;
+  }
+  .info_value {
+    font-size: 18px;
+  }
+  .info_label {
+    font-size: 10px;
+  }
+
+  /* FORM SECTION */
+  .student_form {
+    padding: 10px 10px;
+    gap: 15px;
+  }
+  .form_layout {
+    flex-direction: column; 
+    gap: 10px;
+  }
+  label {
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  input,
+  textarea {
+    width: 100%;
+    font-size: 12px;
+  }
+  .grade_section {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .form_button {
+    width: 100%;
+    justify-content: center;
+  }
+  .save_btn {
+    width: 130px;
+    height: 28px;
+  }
+  .savetext {
+    font-size: 11px;
+  }
+}
+
 
     
 
