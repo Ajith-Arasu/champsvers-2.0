@@ -1,7 +1,4 @@
 .background {
-    background-image: url("../../assets/images/background.png");
-    background-size: cover;
-    background-position: center;
     height: 100vh;
     display: flex;
     padding: 0px 30px;
@@ -27,7 +24,6 @@
 .logo {
     width: 200px;
     margin-bottom: 15px;
-    
 }
 .title {
     color: white;
@@ -52,13 +48,12 @@
 .login_title{
     display:flex;
     flex-direction: column;
-  
 }
 .login_title .text{
     font-family: BeVietnam;
     font-weight: 400;
     font-style: Regular;
-    font-size: 44px;
+    font-size: clamp(1.8rem, 2vw + 1.2rem, 3rem);
     text-align: justify;
     color:#FFFFFF;
 }
@@ -97,4 +92,44 @@
    font-style: Regular;
    font-size: 16px;
    text-align: justify;
+}
+@media (max-width: 768px) {
+.background {
+    height: auto;
+    flex-direction: column;
+    padding: 10px 30px;
+}
+.introcard{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.overlayBox {
+    width: 430px;
+    height: auto;
+}
+.logo {
+    width: 100px;
+}
+.title {
+   font-size: 1.5rem;
+}
+.gamified{
+    text-align: left;   
+    letter-spacing: 0.3rem;
+}
+.login_title .desc{
+   font-size: 9px;   
+}
+.login_form{
+    padding: 10px 10px 5px;
+    width: 300px;
+}
+.login_form input{
+    width:60%;
+    height:10%;
+}   
+.login_form input::placeholder{
+   font-size: 12px;
+}
 }
