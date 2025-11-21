@@ -210,7 +210,7 @@ p{
     padding: 5px 0;
   }
   .score_card {
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     gap: 15px;
     padding: 15px;
