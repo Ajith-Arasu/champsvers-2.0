@@ -1,7 +1,6 @@
 .settingspage{
   border-radius:50px;
   padding:10px 10px 0px;
- 
 }
 .title {
   position:relative;
@@ -64,9 +63,13 @@
     text-align: left;
     justify-content: flex-start;
     padding-left: 5px;
+    font-size: 12px;
   }
   .form_layout input {
-    width: 100%;
+    width: 80%;
+  }
+  .form_layout input::placeholder{
+    font-size: 10px;
   }
   .form_button {
     width: 100%;

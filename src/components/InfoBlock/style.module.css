@@ -26,3 +26,17 @@
   text-align: center;
   color: #C3C3CE;
 }
+@media (max-width: 768px) {
+  .info_box {
+    width: 30%;         /* grid-friendly size on tablets */
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .info_box {
+    width: 45%;         /* two cards per row on mobile */
+    padding: 10px 10px 20px;
+    border-radius: 20px;
+  }
+}

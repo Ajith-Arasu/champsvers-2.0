@@ -6,7 +6,7 @@
   font-family: Heavitas;
   font-weight: 400;
   font-style: Regular;
-  font-size: 14px;
+  font-size: clamp(10px, 2.5vw, 14px);
   letter-spacing: 0px;
   text-align: center;
   align-items: center;
@@ -14,4 +14,10 @@
   color: #FFFFFF;
   padding:10px 5px 5px;
   
+}
+@media (max-width: 768px) {
+  .rectanglebutton {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
 }
