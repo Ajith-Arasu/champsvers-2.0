@@ -28,14 +28,13 @@
   align-items: center;
 }
 @media (max-width: 768px) {
-  .save_btn {
-    width: 100%;
-    max-width: none;
-    height: 40px;
+.save_btn {
+  width: 100%;
+  max-width: none;
+  height: 40px;
   }
-  .save_btn {
+.save_btn {
   padding: 8px 20px;
-  width: auto; /* auto-size based on text */
+  width: auto;
 }
-
 }
