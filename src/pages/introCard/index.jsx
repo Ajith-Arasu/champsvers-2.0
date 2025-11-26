@@ -4,13 +4,13 @@ import styles from './style.module.css';
 import logo from '../../assets/images/cvlogo.png';
 import Button from '../../components/Button/Button';
 const IntroCard = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const loginUser = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://5hxz4ksy26.execute-api.ap-south-1.amazonaws.com/dev/api/v1/user/login",
+      const res = await fetch('https://5hxz4ksy26.execute-api.ap-south-1.amazonaws.com/dev/api/v1/user/login',
         {
           method: "POST",
           headers: {
@@ -24,8 +24,8 @@ const IntroCard = () => {
       );
       const data = await res.json();
       console.log("Response:", data);
-      if (!res.ok) {
-        alert(data.message || "Login Failed");
+      if (!username || !password) {
+        alert("Please enter both username and password");
         return;
       }
       navigate("/dashboard");
