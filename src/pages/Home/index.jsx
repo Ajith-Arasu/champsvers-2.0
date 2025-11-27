@@ -1,7 +1,7 @@
+import styles from './style.module.css';
 import ShowCaseCard from '../../components/Homepage/ShowCaseCard';
 import ShowCaseStatCard from '../../components/Homepage/ShowCaseStatCard';
 import SummaryCard from '../../components/Homepage/SummaryCard';
-import styles from './style.module.css';
 
 const Home = () => {
   return (

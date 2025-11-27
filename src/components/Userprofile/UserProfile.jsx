@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './style.module.css';
 import userimg from '../../assets/images/Boy.png';
 import SquareDots from '../Squaredots/SquareDots';
+import { Link } from 'react-router-dom';
 
 const UserProfile = () => {
   return (
@@ -41,7 +42,7 @@ const UserProfile = () => {
         </div>
       </div>
       <div className={styles.view_btn}>
-        <span className={styles.viewtext}>View Details</span>
+        <Link className={styles.viewtext} to={`/students/:id/details`}>View Details </Link>
       </div>
     </div>
   );

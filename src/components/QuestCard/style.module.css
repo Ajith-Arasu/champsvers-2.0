@@ -40,3 +40,16 @@
   margin-top: 3px;
   color: #FFFFFF;
 }
+@media (max-width: 768px) {
+  .questcard {
+    width: 90%;
+  }
+  .quest_image {
+    width: 100%;
+    height: auto;
+  }
+  .card_description {
+    width: 100%;
+    font-size: 7px;
+  }
+}

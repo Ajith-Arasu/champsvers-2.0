@@ -26,3 +26,10 @@
   text-align: center;
   color: #C3C3CE;
 }
+@media (max-width: 768px) {
+.info_box {
+  width: 30%;      
+  max-width: none;
+  }
+}
+

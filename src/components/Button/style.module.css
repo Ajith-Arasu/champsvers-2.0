@@ -22,8 +22,19 @@
 .savetext{
   font-family: Baloo 2;
   font-weight: 800;
-  font-size: 12px;
+  font-size: clamp(10px, 2vw, 14px);
   text-align: center;
   color:#FFFFFF;
   align-items: center;
+}
+@media (max-width: 768px) {
+.save_btn {
+  width: 100%;
+  max-width: none;
+  height: 40px;
+  }
+.save_btn {
+  padding: 8px 20px;
+  width: auto;
+}
 }

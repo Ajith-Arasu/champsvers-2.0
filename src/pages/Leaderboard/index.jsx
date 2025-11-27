@@ -4,11 +4,11 @@ import RectangleButton from '../../components/RectangleButton/RectangleButton';
 
 const LeaderBoard = () => {
   return (
-    <div className={styles.settingspage}>
+    <div className={styles.leaderpage}>
       <div className={styles.title}>LEADERBOARD</div>
-      <div className={styles.settings_code}>
-        <form className={styles.settings_form}>
-          <div className={styles.settings_button}>
+      <div className={styles.leader_code}>
+        <form className={styles.leader_form}>
+          <div className={styles.leader_button}>
             <div className={styles.first_row}>
               <RectangleButton label="weekly"/>
               <RectangleButton label="Monthly"/>

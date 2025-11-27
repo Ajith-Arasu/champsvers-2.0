@@ -18,7 +18,7 @@
   display: inline-block;
   padding: 0px 20px 5px 5px;
 }
-.title::after {
+/*.title::after {
   content: "";
   position: absolute;
   left: 5px;              
@@ -28,7 +28,7 @@
   max-width: 1200px;     
   background-color: #FFFFFF;
   opacity:30%;
-}
+}*/
 .quest_gallery{
   display:flex;
   column-gap: 20px;
@@ -76,7 +76,6 @@
   text-align: justify;
   color:#FFFFFF;
   box-shadow: 1.08px 2.16px 8.64px 0px rgba(0, 0, 0, 0.25);
-
 }
 .quest_card{
   padding-top:40px;
@@ -88,7 +87,38 @@ input,textarea::placeholder{
   display:flex;
   flex-direction: column;
 }
-
+@media (max-width: 768px) {
+  .title {
+    font-size: 18px;
+  }
+  .quest_gallery {
+    padding-left: 0;
+    column-gap: 10px;
+    justify-content: center;
+  }
+  .quest_creation {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 5px;
+  }
+  .form_group {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .quest_details {
+    width: 100%;
+  }
+  .form_button {
+    width: 100%;
+    justify-content: center;
+  }
+  .quest_preview {
+    width: 100%;
+  }
+  .text_preview {
+    font-size: 13px;
+  }
+}
 
 
 

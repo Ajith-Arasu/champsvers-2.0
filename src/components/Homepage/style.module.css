@@ -73,3 +73,34 @@ color:#FFFFFF;
 font-size: 26px;
 text-align: center;
 }
+@media (max-width: 768px) {
+
+  .summarycard {
+    padding: 30px 15px;
+  }
+   .summarycard .card_value {
+    font-size: 22px;
+  }
+  .summarycard .card_text {
+    font-size: 12px;
+  }
+  .showcase_card {
+    padding: 40px 20px;
+  }
+  .showcase_card .card_text {
+    font-size: 12px;
+  }
+  .showcase-card .card_value{
+    font-size:18px
+  }
+  .showcase_statcard {
+    padding: 40px 20px;
+  }
+  .showcase_statcard p {
+    font-size: 18px;
+  }
+ 
+}
+
+
+

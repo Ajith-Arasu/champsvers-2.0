@@ -1,7 +1,6 @@
-.settingspage{
+.leaderpage{
   border-radius:50px;
   padding:10px 10px 0px;
- 
 }
 .title {
   position:relative;
@@ -13,7 +12,7 @@
   display: inline-block;
   padding: 0px 20px 10px 5px;
 }
-.title::after {
+/*.title::after {
   content: "";
   position: absolute;
   left: 5px;              
@@ -23,15 +22,15 @@
   max-width: 1200px;     
   background-color: #FFFFFF;
   opacity:30%;
-}
-.settings_code{
+}*/
+.leader_code{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 50vh;
 }
-.settings_form{
+.leader_form{
   display:flex;
   flex-direction: column;
   gap:20px;
@@ -72,13 +71,15 @@
   text-align: right;
   color: #FFFFFF;
 }
-.settings_button{
+.leader_form{
+ padding:20px 10px;
+}
+.leader_button{
   padding: 5px;
   display: flex;
   flex-direction: column;
   gap:10px;
   margin-left: 220px;
-
 }
 .first_row{
   display: flex;
@@ -88,6 +89,37 @@
   display: flex;
   gap:15px;
 }
-
-
+@media (max-width: 768px) {
+.title {
+  font-size: 18px;
+  }
+.settings_form {
+  padding: 20px 0px;
+  }
+.form_layout {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  }
+.form_layout label {
+  width: 80%;
+  text-align: left;
+  justify-content: flex-start;
+  font-size: 14px;
+  }
+.form_layout input {
+  width: 100%;
+  border-radius: 40px; 
+  }
+.leader_button {
+  margin-left:0;
+  align-items: left;
+  width: 80%;
+  }
+.first_row,
+.second_row {
+  justify-content: left;
+  gap: 10px;
+  }
+}
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './style.module.css';
+import Button from '../../components/Button/Button';
 
 const StudentProfile = () => {
   return (
@@ -32,9 +33,7 @@ const StudentProfile = () => {
             <textarea cols="30" rows="8" placeholder="ENTER SOMETHING ABOUT THE STUDENT(OPTIONAL)" />
           </div>
           <div className={styles.form_button}>
-            <button className={styles.save_btn}>
-              <p className={styles.savetext}>SAVE</p>
-            </button>
+            <Button label="save"/>
           </div>
         </form>
       </div>

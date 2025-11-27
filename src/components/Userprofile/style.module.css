@@ -139,5 +139,81 @@
     font-size: 16px;
     text-align: center;
     color:#FFFFFF;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+  .student_profile {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    margin: auto;
+  }
 
+  .user_profile {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 0;
+  }
+
+  .user_image {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+  }
+
+  .user_name {
+    font-size: 14px;
+  }
+
+  .user_tag {
+    font-size: 11px;
+  }
+
+  .activity_score {
+    font-size: 14px;
+  }
+
+  .student_details {
+    padding: 8px;
+  }
+
+  .student_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .info_box {
+    min-width: 120px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .info_value {
+    font-size: 15px;
+  }
+
+  .info_label {
+    font-size: 11px;
+  }
+
+  .student_skill {
+    padding: 15px 10px;
+    border-radius: 25px;
+  }
+
+  .skill_text {
+    font-size: 11px;
+  }
+
+  .view_btn {
+    width: 120px;
+    height: 32px;
+    margin-top: 25px;
+  }
+
+  .viewtext {
+    font-size: 14px;
+  }
 }
