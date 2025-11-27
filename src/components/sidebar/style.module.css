@@ -52,29 +52,13 @@
 .active {
   color: #FF9E01 !important;
 }
+
+
+
 @media (max-width: 768px) {
   .sidebar {
-    width: 100%;           /* Full-width */
-    max-width: 100%;
-    padding: 15px;
-    border-radius: 1.2rem;
-  }
-
-  .menu li,
-  .sidebar ul li {
-    margin: 10px 0;
-  }
-
-  .submenu ul {
-    padding-left: 15px;
-  }
-}
-
-/* 📱 SMALL MOBILE */
-@media (max-width: 480px) {
-  .sidebar {
     padding: 12px;
-    font-size: 10px;       /* Slight adjustment */
+    font-size: 10px;      
   }
 
   .submenu ul {
