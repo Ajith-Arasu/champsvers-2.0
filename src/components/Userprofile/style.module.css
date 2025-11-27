@@ -139,10 +139,9 @@
     font-size: 16px;
     text-align: center;
     color:#FFFFFF;
-
+    text-decoration: none;
 }
 @media (max-width: 768px) {
-
   .student_profile {
     width: 100%;
     padding: 12px;

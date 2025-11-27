@@ -85,6 +85,11 @@
     width:80%;
     height:10%;
     border-radius: 10px;
+    font-size: 14px;
+    color:#FFFFFF;
+    font-family: BeVietnam;
+    font-weight: 400;
+    font-style: Regular; 
 }
 .login_form input::placeholder{
    font-family: BeVietnam;
