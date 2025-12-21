@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './style.module.css';
 import Button from '../../components/Button/Button';
+import PageHeader from '../../components/Header/PageHeader';
 
 const StudentProfile = () => {
   return (
     <div className={styles.studentspage}>
-      <div className={styles.title}>Students</div>
+      <PageHeader title="STUDENTS" dividerwidth="100%" />
       <div>
         <form className={styles.student_form}>
           <div className={styles.form_layout}>

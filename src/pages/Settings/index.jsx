@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './style.module.css';
 import Button from '../../components/Button/Button';
+import PageHeader from '../../components/Header/PageHeader';
 
 const Settings = () => {
   return(
     <div className={styles.settingspage}>
-      <div className={styles.title}>SETTINGS | CHANGE CODE</div>
+      <PageHeader title="SETTINGS | CHANGE CODE" dividerwidth="100%" />
       <div className={styles.settings_code}>
         <form className={styles.settings_form}>
           <div className={styles.form_layout}>

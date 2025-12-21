@@ -1,0 +1,25 @@
+.add_btn{
+  width:160px;
+  height:20px;
+  background-color:#D9D9D929;
+  padding:5px;
+  display: flex;
+  gap:5px;
+  align-items: center;
+  justify-content: left;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+.btn_icon{
+  width:20px;
+  height:20px;
+  object-fit: contain;
+}
+.btn_text{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 11px;
+  color:#FFFFFF;
+}

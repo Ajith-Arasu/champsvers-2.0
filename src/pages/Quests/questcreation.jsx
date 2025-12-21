@@ -2,12 +2,13 @@ import React from 'react'
 import styles from './style.module.css';
 import QuestCard from '../../components/QuestCard/QuestCard';
 import Button from '../../components/Button/Button';
+import PageHeader from '../../components/Header/PageHeader';
 
 const QuestCreation = () => {
   return (
     <div className={styles.questspage}>
-      <div className={styles.title}>QUESTS</div>
-      <div className={styles.quest_creation}>
+      <PageHeader title="QUESTS" dividerwidth="100%" />
+         <div className={styles.quest_creation}>
         <form>
           <div className={styles.quest_details}>
             <div className={styles.form_group}>
@@ -17,7 +18,7 @@ const QuestCreation = () => {
             <div className={styles.form_group}>
               <label>DESCRIPTION</label>
               <textarea type="text" rows="9" cols="30" name="description" 
-              placeholder="Draw a fish tank or bowl that you own or wish to own and explain about the breeds of the fishes inside. What food would you feed them? What plants will you plant inside, what other things you will keep inside the to make it a home for all the fishes."></textarea>
+                placeholder="Draw a fish tank or bowl that you own or wish to own and explain about the breeds of the fishes inside. What food would you feed them? What plants will you plant inside, what other things you will keep inside the to make it a home for all the fishes."></textarea>
             </div>
             <div className={styles.form_group}>
               <label className={styles.points}>POINTS<span>(30 TO 200)</span></label>

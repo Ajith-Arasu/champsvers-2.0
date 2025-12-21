@@ -1,10 +1,20 @@
-import UserProfile from '../../components/Userprofile/UserProfile';
+import { useNavigate } from 'react-router-dom';
 import styles from './style.module.css';
+import AddButton from '../../components/Addbutton/AddButton';
+import UserProfile from '../../components/Userprofile/UserProfile';
+import PageHeader from '../../components/Header/PageHeader';
 
 const Students = () => {
+
+  const navigate = useNavigate();
+  const studentProfile = (id)=>{
+    navigate(`/students/${id}/profile`);
+}; 
   return( 
     <div className={styles.studentspage}>
-      <div className={styles.title}>Students</div>
+      <PageHeader title="STUDENTS" dividerwidth="100%">
+        <AddButton text="ADD NEW STUDENT" onClick={()=>studentProfile(123)}/>
+      </PageHeader>
       <div className={styles.userdetails}>
         <span className={styles.searchtext}>Search</span>
         <div className={styles.searchcontainer}>

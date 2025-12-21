@@ -1,0 +1,93 @@
+
+.mobileMenuBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+  position:absolute;
+  top:48px;
+  left:5px;
+  margin-right: 5px;
+}
+.mobileMenuBtn img {
+  width: 25px;
+  height: 23px;
+}
+.mobilesidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(78.47deg, rgba(252, 53, 97, 1) -7.11%, rgba(150, 32, 58, 1) 107.74%);
+  color: #FFFFFF;
+  font-weight: 300;
+  font-family: 'Heavitas';
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 20px;
+}
+.close_btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: transparent !important;
+  color: #fff;        
+  padding: 6px;
+  z-index: 1100;
+}
+.mobileMenu {
+  margin-top: 60px; 
+  display: flex;
+  flex-direction: column;
+}
+.mobileMenu a {
+  text-decoration: none;       
+  color: #FFFFFF;                 
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  font-weight: 400;
+  transition: opacity 0.2s;
+}
+
+/* Activities dropdown header */
+.submenuHeader {
+  display: flex;
+  align-items: center;        
+  justify-content: space-between; 
+  width: 100%;                
+  padding: 12px 16px 12px 0px;         
+  cursor: pointer;
+  box-sizing: border-box;
+}
+/* Dropdown icon */
+.dropdownIcon {
+  font-size: 24px;
+  margin-right:5px;
+  color:#000;
+}
+/* Submenu links */
+.submenuLinks {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  }
+.submenuLinks a {
+  padding: 10px 0;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  border-bottom: none;
+}
+@media (min-width: 769px) {
+  .mobileMenuBtn {
+    display: none;
+  }
+  .mobilesidebar {
+    width: 320px;      
+  }
+}
+

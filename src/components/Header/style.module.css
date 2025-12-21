@@ -1,0 +1,33 @@
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hometext {
+  position:relative;
+  font-family: 'Heavitas';
+  font-weight: 400;
+  font-size: 24px;
+  color: #f4f4f4;
+  text-align: left;
+  display: inline-block;
+}
+.title_bar {
+  display: flex;
+  align-items: center;
+  gap:120px;
+  width: 100%;
+}
+@media (max-width: 770px) {
+.hometext {
+  font-size: 18px;
+  padding:0;
+  text-align: left;
+}
+.title_bar{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap:10px;
+}
+}

@@ -4,16 +4,10 @@ body {
   background-image: url("../src//assets/images/background.png");
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  height: 100vh;
   backdrop-filter: blur(10px);
 }
-@media (max-width: 768px) {
-  body {
-    height: auto;       
-    min-height: 100dvh;   
-    backdrop-filter: blur(10px); 
-  }
-}
+
 
 @font-face {
   font-family: "BarlowCondensed";
@@ -59,12 +53,6 @@ body {
 @font-face {
   font-family: "SfCompact";
   src: url("../src/assets/font/sf-compact-display-medium.otf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "BeVietnam";
-  src: url("../src/assets/font/BeVietnamPro-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }

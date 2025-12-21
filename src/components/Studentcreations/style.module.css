@@ -14,7 +14,7 @@
 }
 @media (max-width: 768px) {
 .student_creations{
-  gap:15px;
+  gap:10px;
   }
 .image_gallery {
   width: 100%;

@@ -1,17 +1,17 @@
+.menu{
+  margin:60px 0px;
+}
 .sidebar ul {
-  list-style: none;
+  list-style:none;
   padding: 0;
 }
-
 .sidebar ul li {
-  margin: 10px 0;
+  margin: 20px 0;
 }
-
 .sidebar ul li a {
   color: white;
   text-decoration: none;
 }
-
 .sidebar {
   padding: 20px;
   width: 15%;
@@ -20,9 +20,10 @@
   color: white;
   font-weight: 300;
   font-family: 'Heavitas';
-  font-size: 11px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
 }
-
 .menu {
   list-style: none;
   padding: 0;
@@ -40,44 +41,40 @@
 .menu a:hover {
   color: #FF9E01;
 }
+.submenu{
+  margin-top: 30px;
+}
 
 .submenu ul {
   list-style: none;
-  padding-left: 20px; 
+  padding-left: 30px; 
   margin-top: 8px;
   font-weight: 300;
   font-family: 'Heavitas';
-  font-size: 11px;
+  font-size: 12px;
 }
 .active {
   color: #FF9E01 !important;
 }
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;           /* Full-width */
-    max-width: 100%;
-    padding: 15px;
-    border-radius: 1.2rem;
-  }
-
-  .menu li,
-  .sidebar ul li {
-    margin: 10px 0;
-  }
-
-  .submenu ul {
-    padding-left: 15px;
-  }
+.bullet{
+  width:6px;
+  height:6px;
+  display:inline-block;
+  border:transparent;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  margin:3px 10px 3px 0px;
 }
+/* DEFAULT: DESKTOP */
 
-/* 📱 SMALL MOBILE */
-@media (max-width: 480px) {
-  .sidebar {
-    padding: 12px;
-    font-size: 10px;       /* Slight adjustment */
-  }
 
-  .submenu ul {
-    padding-left: 12px;
-  }
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+ 
+.sidebar{
+  display:none;
+}
+  
+
 }

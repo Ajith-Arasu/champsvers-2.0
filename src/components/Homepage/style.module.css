@@ -1,7 +1,7 @@
 .summarycard {
   width:40%;
   height:auto;  
-  border-radius: 40px;
+  border-radius: 25px;
   background: linear-gradient(rgba(129,130,134,0.4)0%, rgba(0,0,0,0.4)100%);
   font-family: 'Heavitas';
   padding: 60px 0px;
@@ -12,27 +12,28 @@
   align-items: center;
   }
 .summarycard .card_value {
-    font-family: 'Heavitas';
-    font-weight: 400;
-    font-size: 45px;
-    align-items: center;
-    color:#FFFFFF;
-    text-align: center;
+  font-family: 'Heavitas';
+  font-weight: 400;
+  font-size: 45px;
+  align-items: center;
+  color:#FFFFFF;
+  text-align: center;
  } 
 .summarycard .card_text {
-    font-family: 'Heavitas';
-    font-weight: 400;
-    font-size: 18px;
-    font-style:normal;
-    letter-spacing: 0px;
-    vertical-align: middle;
-    align-items: center;
-    color:#FFFFFF;
-    }
+  font-family: 'Heavitas';
+  font-weight: 400;
+  font-size: 18px;
+  font-style:normal;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  align-items: center;
+  color:#FFFFFF;
+}
+/*showcase_card*/
 .showcase_card{
   width:15%;
-  height:auto;
-  border-radius: 40px;
+  height:80px;
+  border-radius: 25px;
   background: linear-gradient(rgba(129,130,134,0.4)0%, rgba(0,0,0,0.4)100%);
   display: flex;
   flex-direction: column;
@@ -41,66 +42,115 @@
   padding:60px 0px;
 }
 .showcase_card .card_value{
-font-family: 'Heavitas';
-font-weight: 400;
-font-size: 26px;
-text-align: center;
-align-items: center;
-color:#FFFFFF;
+  font-family: 'Heavitas';
+  font-weight: 400;
+  font-size: 26px;
+  text-align: center;
+  align-items: center;
+  color:#FFFFFF;
 }
 .showcase_card .card_text{
-font-family: 'Heavitas';
-font-weight: 400;
-color: #C3C3CE;
-font-style: Regular;
-font-size: 16px;
-text-align: center;
-vertical-align: middle;
+  font-family: 'Heavitas';
+  font-weight: 400;
+  color: #C3C3CE;
+  font-style: Regular;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
 }
 .showcase_statcard{
   width:30%;
-  height:auto;
-  border-radius: 40px;
+  height:80px;
+  border-radius: 25px;
   background: linear-gradient(rgba(129,130,134,0.4)0%, rgba(0,0,0,0.4)100%);
   padding: 60px 15px;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  align-items: center;    
+  justify-content: center; 
 }
-.showcase_statcard p{
-font-family: 'Heavitas';
-font-weight: 400;
-color:#FFFFFF;
-font-size: 26px;
-text-align: center;
+.showcase_statcard span {
+  font-family: 'Heavitas';
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 26px;
+  text-align: center;
 }
+
+
+/*---Mobile View---*/
 @media (max-width: 768px) {
-
-  .summarycard {
-    padding: 30px 15px;
-  }
-   .summarycard .card_value {
-    font-size: 22px;
-  }
-  .summarycard .card_text {
-    font-size: 12px;
-  }
-  .showcase_card {
-    padding: 40px 20px;
-  }
-  .showcase_card .card_text {
-    font-size: 12px;
-  }
-  .showcase-card .card_value{
-    font-size:18px
-  }
-  .showcase_statcard {
-    padding: 40px 20px;
-  }
-  .showcase_statcard p {
-    font-size: 18px;
-  }
- 
+.summarycard {
+  width: 60%;   
+  margin: 0 auto;
+  padding: 40px;
+}
+.summarycard .card_value {
+  font-size: 45px;
+}
+.summarycard .card_text {
+  font-size: 16px;
+}
+.showcase_card {
+  width: 100%;        
+  padding: 50px 0px;
+}
+.showcase_card .card_value {
+  font-size: 30px;
+}
+.showcase_card .card_text {
+  font-size: 16px;
+}
+.showcase_statcard {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 46px 0px;
+}
+.showcase_statcard p {
+  font-size: 25px;
+}
+.summarycard,
+.showcase_card,
+.showcase_statcard {
+  border-radius: 16px;
+}
 }
 
+/* SMALL MOBILE */
+@media (max-width: 425px) {
+.summarycard {
+  width: calc(100% - 40px);   
+  margin: 0 auto;
+  padding: 38px 0px;
+}
+.summarycard .card_value {
+  font-size: 26px;
+}
+.summarycard .card_text {
+  font-size: 12px;
+}
+.showcase_card {
+  width: 100%;        
+  padding: 42px 0px;
+}
+.showcase_card .card_value {
+  font-size: 18px;
+}
+.showcase_card .card_text {
+  font-size: 11px;
+}
+.showcase_statcard {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 46px 0px;
+}
+.showcase_statcard p {
+  font-size: 18px;
+}
+.summarycard,
+.showcase_card,
+.showcase_statcard {
+  border-radius: 16px;
+}
+}
 
 

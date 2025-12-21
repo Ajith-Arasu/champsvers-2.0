@@ -4,7 +4,7 @@ import styles from './style.module.css';
 const ShowCaseStatCard = () => {
   return (
     <div className={styles.showcase_statcard}>
-      <p>VIEW MORE STATS</p>
+      <span>VIEW MORE STATS</span>
     </div>
   )
 }
