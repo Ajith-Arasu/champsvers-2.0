@@ -1,0 +1,14 @@
+{
+  "posts":[
+    {"value": 315, "label": "QUESTS"},
+    {"value": 730, "label": "ARTS"},
+    {"value": 34, "label": "BOOKS" },
+    {"value": 20, "label": "MUSIC"},
+    {"value": 23, "label": "ACHIEVEMENTS"},
+    {"value": 16, "label": "SPORTS"},
+    {"value": 16, "label": "AWARDS"},
+    {"value": 16, "label": "QUIZES"},
+    {"value": 26, "label": "COLLECTIONS"},
+    {"value": 18, "label": "TROPHIES"}
+  ]
+}

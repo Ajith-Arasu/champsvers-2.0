@@ -1,8 +1,14 @@
 .background {
+    background-image: url("../../assets/images/background.png");
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0px 30px;
 }
+
 .introcard{
     display:flex;
     gap:20px;

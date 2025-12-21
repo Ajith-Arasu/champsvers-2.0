@@ -1,0 +1,11 @@
+.app_root{
+    display: flex;
+    height: 100vh;
+    flex-direction:column;
+}
+@media (max-width: 425px) {
+  .app_root{
+    height: auto;
+    min-height: 100vh;
+  }
+}

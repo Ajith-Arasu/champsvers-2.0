@@ -1,13 +1,42 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './style.module.css';
 import clanimg from '../../assets/images/clanimage.png';
 import StudentCreations from '../../components/Studentcreations/StudentCreations';
 import InfoBlock from '../../components/InfoBlock/InfoBlock';
+import AddButton from '../../components/Addbutton/AddButton';
+import rtchevicon from '../../assets/images/rgtchevron.png';
+import PageHeader from '../../components/Header/PageHeader';
 
 const ClanDetails = () => {
+  const [talentList, settalentList] = useState([]);
+  const navigate = useNavigate();
+  const handleClick = (id) =>{
+    navigate(`/students/${id}/profile`);
+  }
+
+  useEffect(() =>{
+    const fetchtalentList = async () =>{
+      try{
+        const response = await api.get('/posts');
+        settalentList(data.posts);
+        console.log(response.data);
+      } catch(err)
+{
+        console.log(err.message);
+      }
+    }
+    fetchtalentList();
+  },[]);
   return (
     <div className={styles.clanspage}>
-      <div className={styles.title}>CLAN</div>
+      <PageHeader title="CLAN" dividerwidth="100%">
+        <div className={styles.titlebtn_grp}>
+          <AddButton text="ADD STUDENT" onClick={()=>handleClick(123)}/>
+          <AddButton text="DELETE CLAN" icon={rtchevicon} /> 
+        </div>
+      </PageHeader>
       <div className={styles.clandetails}>
         <div className={styles.score_card}>
           <div className={styles.user_activity}>
@@ -41,16 +70,9 @@ const ClanDetails = () => {
           </div>
         </div>
         <div className={styles.talent_showcase}>
-          <InfoBlock value="315" label="QUESTS" />
-          <InfoBlock value="730" label="ARTS" />
-          <InfoBlock value="34" label="BOOKS" />
-          <InfoBlock value="20" label="MUSIC" />
-          <InfoBlock value="23" label="ACHIEVEMENTS" />
-          <InfoBlock value="16" label="SPORTS" />
-          <InfoBlock value="16" label="AWARDS" />
-          <InfoBlock value="16" label="QUIZES" />
-          <InfoBlock value="26" label="COLLECTIONS" />
-          <InfoBlock value="18" label="TROPHIES" />
+          {talentList.map((talent,index) => (
+            <InfoBlock key={index} value={talent.value} label={talent.label} />
+          ))}
         </div>
         <StudentCreations />
       </div>

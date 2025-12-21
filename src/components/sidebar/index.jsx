@@ -3,53 +3,56 @@ import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className={styles.sidebar}>
-      <ul className={styles.menu}>
+    <> 
+      <div className={styles.overlay}></div>
+    
+      <div className={styles.sidebar}>
+       <ul className={styles.menu}>
         <li>
           <NavLink to="/dashboard" className={({ isActive }) => (isActive ? styles.active : '')}>
-            Home
+            <span className={styles.bullet}></span>Home
           </NavLink>
         </li>
         <li>
           <NavLink to="/latestwork" className={({ isActive }) => (isActive ? styles.active : '')}>
-            Latest Works
+            <span className={styles.bullet}></span>Latest Works
           </NavLink>
         </li>
         <li>
           <NavLink to="/students" className={({ isActive }) => (isActive ? styles.active : '')}>
-            Students
+            <span className={styles.bullet}></span>Students
           </NavLink>
         </li>
         <li>
           <NavLink to="/clans" className={({ isActive }) => (isActive ? styles.active : '')}>
-            Clans
+            <span className={styles.bullet}></span>Clans
           </NavLink>
         </li>
         <li>
           <NavLink to="/quests" className={({ isActive }) => (isActive ? styles.active : '')}>
-            Quests
+            <span className={styles.bullet}></span>Quests
           </NavLink>
         </li>
         <li>
           <NavLink to="/leaderboard" className={({ isActive }) => (isActive ? styles.active : '')}>
-            Leaderboard
+            <span className={styles.bullet}></span>Leaderboard
           </NavLink>
         </li>
         <li>
           <NavLink to="/settings" className={({ isActive }) => (isActive ? styles.active : '')}>
-            Settings
+            <span className={styles.bullet}></span>Settings
           </NavLink>
         </li>
 
         <li className={styles.submenu}>
-          <span>Activities</span>
+          <span><span className={styles.bullet}></span>Activities</span>
           <ul>
             <li>
               <NavLink
                 to="/activities/comments"
                 className={({ isActive }) => (isActive ? styles.active : '')}
               >
-                Comments
+                <span className={styles.bullet}></span>Comments
               </NavLink>
             </li>
             <li>
@@ -57,13 +60,15 @@ const Sidebar = () => {
                 to="/activities/reactions"
                 className={({ isActive }) => (isActive ? styles.active : '')}
               >
-                Reactions
+                <span className={styles.bullet}></span>Reactions
               </NavLink>
             </li>
           </ul>
         </li>
       </ul>
-    </div>
+     </div>
+
+    </>
   );
 };
 

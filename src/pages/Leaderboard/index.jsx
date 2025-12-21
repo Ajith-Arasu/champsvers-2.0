@@ -1,11 +1,14 @@
 import React from 'react'
 import styles from './style.module.css';
 import RectangleButton from '../../components/RectangleButton/RectangleButton';
+import PageHeader from '../../components/Header/PageHeader';
+import { useMediaQuery } from '@mui/material';
 
 const LeaderBoard = () => {
+  const isMobile = useMediaQuery('(max-width:768px)');
   return (
     <div className={styles.leaderpage}>
-      <div className={styles.title}>LEADERBOARD</div>
+      <PageHeader title="LEADERBOARD" dividerwidth="100%" />
       <div className={styles.leader_code}>
         <form className={styles.leader_form}>
           <div className={styles.leader_button}>
@@ -23,19 +26,19 @@ const LeaderBoard = () => {
           </div>
           <div className={styles.form_layout}>
             <label>SCA JACUARS</label>
-            <input style={{ width: "330px" }} type="text" placeholder="33,023 pts" name="currentcode" />
+            <input style={{ width: isMobile ? '70%' : '330px' }} type="text" placeholder="33,023 pts" name="currentcode" />
           </div>
           <div className={styles.form_layout}>
             <label>SCA PANTHERS</label>
-            <input style={{ width: "250px" }} type="text" name="newcode" />
+            <input style={{ width: isMobile ? '50%' : "250px" }} type="text" name="newcode" />
           </div>
           <div className={styles.form_layout}>
             <label>SCA LEOPARDS</label>
-            <input style={{ width: "290px" }} type="text" name="newcode" />
+            <input style={{ width: isMobile ? '60%' :"290px" }} type="text" name="newcode" />
           </div>
           <div className={styles.form_layout}>
             <label>SCA CHEETAHS</label>
-            <input style={{ width: "390px" }} type="text" name="newcode" />
+            <input style={{ width: isMobile ? '80%' : "390px" }} type="text" name="newcode" />
           </div>
         </form>
       </div>

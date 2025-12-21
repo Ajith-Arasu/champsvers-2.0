@@ -3,35 +3,43 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from './style.module.css';
 import logo from '../../assets/images/cvlogo.png';
 import Button from '../../components/Button/Button';
+import ApiCall from '../Api/api';
 const IntroCard = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const {login} = ApiCall();
   const navigate = useNavigate();
-  const loginUser = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    try {
-      const res = await fetch('https://5hxz4ksy26.execute-api.ap-south-1.amazonaws.com/dev/api/v1/user/login',
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            email: username,
-            password: password
-          })
-        }
-      );
-      const data = await res.json();
-      console.log("Response:", data);
-      if (!username || !password) {
-        alert("Please enter both username and password");
-        return;
-      }
-      navigate("/dashboard");
-    } catch (error) {
-      alert("Network error");
+    if (username.includes(" ") || password.includes(" ")) {
+    alert("Username and password should not contain any spaces");
+    return;
+  }
+    const credentials={
+      email:username.trim(),
+      password:password.trim(),
+    };
+    if(!credentials.email || !credentials.password){
+      alert('please enter both username and password');
+      return;
     }
+    login(credentials)
+      .then((res)=>{
+        console.log('Response', res);
+        navigate("/dashboard");
+      })
+      .catch ((error)=>{
+        if(error.response){
+          console.error('Response Error:',error.response.data);
+          alert("Invalid username and password");
+
+        }
+        if(error.request){
+          console.error('No response:', error.request);
+        }else{
+          console.error('Error', error.message);
+        }
+      });
   };
   return (
     <div className={styles.background}>
@@ -50,7 +58,7 @@ const IntroCard = () => {
         <div className={styles.login_title}>
           <div className={styles.text}>Sign in</div>
           <div className={styles.desc}>To manage your school dashboard</div>
-          <form className={styles.login_form} onSubmit={loginUser}>
+          <form className={styles.login_form} onSubmit={handleLogin}>
             <input 
               type="text"
               placeholder="USERID"
