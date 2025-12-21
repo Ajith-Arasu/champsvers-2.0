@@ -18,7 +18,7 @@ const Home = () => {
   ];
   return (
     <div className={styles.homepage}>
-      <PageHeader title="Home" dividerWidth="100%" />
+      <PageHeader title="Home" dividerWidth="97%" />
       <div className={styles.activity_panel}>
         <div className={styles.summary_section}>
           {summaryList.map((summary,index)=>
