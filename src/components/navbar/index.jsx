@@ -1,7 +1,8 @@
 import styles from './style.module.css';
 import logo from '../../assets/images/cvlogo.png';
 import avatar from '../../assets/images/adminimg.png';
-import HamburgerMenu from '../Hamburger/hamburgermenu';
+import Hamburger from '../Hamburger/Hamburger';
+
 
 const Navbar = () => {
   return (
@@ -17,7 +18,7 @@ const Navbar = () => {
           <div className={styles.dropdownItem}>Logout</div>
         </div>
       </div>
-      <HamburgerMenu />
+      <Hamburger />
     </div>
   );
 };

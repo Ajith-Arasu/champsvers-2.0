@@ -7,10 +7,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-
-const HamburgerMenu = () => {
-  const [open, setOpen] = useState(false);
-  const [activitiesOpen, setActivitiesOpen] = useState(false);
+const Hamburger = () => {
+const [open, setOpen] = useState(false);
+const [activitiesOpen, setActivitiesOpen] = useState(false);
 
   const toggleMenu = () => {
     setOpen(prev => !prev);
@@ -116,6 +115,7 @@ const HamburgerMenu = () => {
         </div>
       )}
     </>
-  );
-};
-export default HamburgerMenu
+  )
+}
+
+export default Hamburger
