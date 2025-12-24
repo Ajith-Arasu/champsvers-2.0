@@ -12,6 +12,10 @@
   color: white;
   text-decoration: none;
 }
+.navLink {
+  display: flex;
+  align-items: center;
+}
 .sidebar {
   padding: 20px;
   width: 15%;
@@ -28,23 +32,19 @@
   list-style: none;
   padding: 0;
 }
-
 .menu li {
   margin: 15px 0;
 }
-
 .menu a {
   color: white;
   text-decoration: none;
 }
-
 .menu a:hover {
   color: #FF9E01;
 }
 .submenu{
   margin-top: 30px;
 }
-
 .submenu ul {
   list-style: none;
   padding-left: 30px; 
@@ -65,9 +65,6 @@
   background-color: #FFFFFF;
   margin:3px 10px 3px 0px;
 }
-/* DEFAULT: DESKTOP */
-
-
 
 /* MOBILE VIEW */
 @media (max-width: 768px) {
@@ -75,6 +72,5 @@
 .sidebar{
   display:none;
 }
-  
 
 }
