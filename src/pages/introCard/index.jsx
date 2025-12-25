@@ -32,8 +32,7 @@ const IntroCard = () => {
         if(error.response){
           console.error('Response Error:',error.response.data);
           alert("Invalid username and password");
-
-        }
+  }
         if(error.request){
           console.error('No response:', error.request);
         }else{
@@ -43,6 +42,7 @@ const IntroCard = () => {
   };
   return (
     <div className={styles.background}>
+      <div className={styles.bgBlur}></div>
       <div className={styles.introcard}>
         <div className={styles.overlayBox}>
           <h1 className={styles.title}>
@@ -55,22 +55,24 @@ const IntroCard = () => {
         </div>
       </div>
       <div className={styles.login}>
-        <div className={styles.login_title}>
-          <div className={styles.text}>Sign in</div>
-          <div className={styles.desc}>To manage your school dashboard</div>
-          <form className={styles.login_form} onSubmit={handleLogin}>
-            <input 
-              type="text"
-              placeholder="USERID"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)} />
-            <input
-              type="password"
-              placeholder="PASSWORD"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)} />
-            <Button type="submit" label="Continue" />
-          </form>
+        <div className={styles.login_details}>
+          <div className={styles.login_title}>
+            <div className={styles.text}>Sign in</div>
+            <div className={styles.desc}>To manage your school dashboard</div>
+            <form className={styles.login_form} onSubmit={handleLogin}>
+              <input 
+                type="text"
+                placeholder="USERID"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)} />
+              <input
+                type="password"
+                placeholder="PASSWORD"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)} />
+              <Button type="submit" label="Continue" />
+            </form>
+          </div>
         </div>
       </div>
     </div>
