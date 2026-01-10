@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from './style.module.css';
 import logo from '../../assets/images/cvlogo.png';
 import Button from '../../components/Button/Button';
-import { loginUser } from '../Api/api'
+import { login } from '../Api/api'
 
 const IntroCard = () => {
   const [username, setUsername] = useState('');
@@ -28,7 +28,7 @@ const IntroCard = () => {
     }
 
     try {
-      const res = await loginUser(credentials);
+      const res = await login(credentials);
       console.log('Login Success:', res);
       navigate("/dashboard");
     }catch (error){
