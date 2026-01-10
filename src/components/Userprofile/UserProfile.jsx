@@ -4,7 +4,7 @@ import userimg from '../../assets/images/Boy.png';
 import SquareDots from '../Squaredots/SquareDots';
 import { Link } from 'react-router-dom';
 
-const UserProfile = () => {
+const UserProfile = ({student}) => {
   return (
     <div className={styles.student_profile}>
       <div className={styles.profile_menu}>
@@ -14,7 +14,7 @@ const UserProfile = () => {
         <div className={styles.user_profile}>
           <img className={styles.user_image} src={userimg} alt="userimage"/>
           <div className={styles.user_info}>
-            <p className={styles.user_name}>BILLY JOE</p>
+            <p className={styles.user_name}>{student.name}</p>
             <span className={styles.user_tag}>@ Billy</span>
             <p className={styles.activity_score}>ACTIVITY SCORE:3445</p>
           </div>
@@ -27,7 +27,7 @@ const UserProfile = () => {
             <span className={styles.info_label}>Age</span>
           </div>
           <div className={styles.info_box}>
-            <p className={styles.info_value}>B</p>
+            <p className={styles.info_value}>{student.grade}</p>
             <span className={styles.info_label}>GRADE</span>
           </div>
           <div className={styles.info_box}>
@@ -42,7 +42,7 @@ const UserProfile = () => {
         </div>
       </div>
       <div className={styles.view_btn}>
-        <Link className={styles.viewtext} to={`/students/:id/details`}>View Details </Link>
+        <Link className={styles.viewtext} to={`/students/:id/details`} state={{ student }}>View Details </Link>
       </div>
     </div>
   );

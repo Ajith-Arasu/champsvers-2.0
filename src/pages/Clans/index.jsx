@@ -10,12 +10,7 @@ import axios from 'axios';
 const Clans = () => {
   const [clanCards, setClanCards]=useState([]);
   const BASE_URL = import.meta.env.VITE_IMAGE_CDN
- {/* const clanCards=[
-    {id:1, image: img1, label:"SCA PANTHERS", value:"302"},
-    {id:2, image:img2, label:"SCA JAGUARS", value:"310"},
-    {id:3, image:img3, label:"SCA LEOPARDS", value:"299"},
-    {id:4, image:img4, label:"SCA CHEETAH", value:"315"}
-  ];*/}
+
   const navigate=useNavigate();
   const handleImageClick=(id)=>{
     navigate(`/clans/${id}/details`);

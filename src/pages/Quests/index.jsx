@@ -7,20 +7,12 @@ import AddButton from '../../components/Addbutton/AddButton';
 import PageHeader from '../../components/Header/PageHeader';
 import axios from 'axios';
 
-
 const Quests = () =>{ 
   const [quests, setQuests]= useState([]);
   const navigate=useNavigate();
   const handleClick=(id)=>{
     navigate(`/quests/${id}/questcreation`);
   }
- {/*const quests = Array.from({ length: 10 }, (_, index) => ({
-  id: index + 1,
-  image: questimg,
-  titleLine1: "A BEAUTIFUL",
-  titleLine2: "AQUARIUM",
-  description: "Draw a fish tank or bowl that you own or wish to own and explain about the breeds of the fishes inside. What food would you feed them? What plants will you plant inside, what other things you will keep inside the  to make it a home for all the fishes. " 
-}));*/}
    const fetchQuests = async () => {
     try {
       const accessToken = localStorage.getItem("access_token");

@@ -3,18 +3,21 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from './style.module.css';
 import logo from '../../assets/images/cvlogo.png';
 import Button from '../../components/Button/Button';
-import ApiCall from '../Api/api';
+import { loginUser } from '../Api/api'
+
 const IntroCard = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const {login} = ApiCall();
+ 
   const navigate = useNavigate();
+  
   const handleLogin = async (e) => {
     e.preventDefault();
+  
     if (username.includes(" ") || password.includes(" ")) {
-    alert("Username and password should not contain any spaces");
-    return;
-  }
+      alert("Username and password should not contain any spaces");
+      return;
+}
     const credentials={
       email:username.trim(),
       password:password.trim(),
@@ -23,22 +26,19 @@ const IntroCard = () => {
       alert('please enter both username and password');
       return;
     }
-    login(credentials)
-      .then((res)=>{
-        console.log('Response', res);
-        navigate("/dashboard");
-      })
-      .catch ((error)=>{
-        if(error.response){
-          console.error('Response Error:',error.response.data);
-          alert("Invalid username and password");
-  }
-        if(error.request){
-          console.error('No response:', error.request);
-        }else{
-          console.error('Error', error.message);
-        }
-      });
+
+    try {
+      const res = await loginUser(credentials);
+      console.log('Login Success:', res);
+      navigate("/dashboard");
+    }catch (error){
+      if(error.response){
+        console.error('Response Error:',error.response.data);
+        alert("Invalid username and password");
+      }else{
+        console.error('Error', error.message);
+      }
+    };
   };
   return (
     <div className={styles.background}>
