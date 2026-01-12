@@ -9,6 +9,7 @@ import PageHeader from '../../components/Header/PageHeader';
 const Students = () => {
   const [students, setStudents] = useState([]);
   const [selectedStudent, setSelectedStudent] = useState([null]);
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -23,6 +24,7 @@ const Students = () => {
 
   const fetchStudents = async () => {
     try {
+      setLoading(true);
       const accessToken = localStorage.getItem("access_token");
       if (!accessToken) {
         console.error("Access token not found");
@@ -44,12 +46,14 @@ const Students = () => {
       setStudents(response.data.data);
     } catch (error) {
       console.error("Error fetching students:", error);
-    }
+    }finally {
+      setLoading(false);
+  }
 };
 
   useEffect(()=>{
     fetchStudents();
-   },[]);
+  },[]);
   return( 
     <div className={styles.studentspage}>
       <PageHeader title="STUDENTS" dividerwidth="100%">
@@ -60,13 +64,18 @@ const Students = () => {
         <div className={styles.searchcontainer}>
           <div className={styles.searchbar}></div>
           <ul className={styles.studentnames}>
-            {students.map((student) => {
-              return (
-                <li key={student.uid_ptype}  onClick={() => handleStudentClick(student)}>
-                  {student.name || "Unnamed Student"}
-                </li>
-              );
-            })}
+            {loading ? (
+              <li className={styles.loadingText}>Loading students...</li>
+            ) : students.length > 0 ? (
+              students.map((student) => {
+                return (
+                  <li key={student.uid_ptype}  onClick={() => handleStudentClick(student)}>
+                    {student.name || "Unnamed Student"}
+                  </li>
+                )})
+            ) : (
+              <li className={styles.noData}>No students found</li>
+            )}
           </ul>
         </div>
         <UserProfile student={selectedStudent}/>

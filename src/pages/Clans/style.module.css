@@ -254,7 +254,7 @@ p{
   }
   .clan_new {
     flex-direction: column;
-    gap: 25px;
+    gap: 0px;
     padding-top: 20px;
   }
   .clan_details {

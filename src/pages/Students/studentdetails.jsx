@@ -46,7 +46,7 @@ const StudentDetails = () => {
               <div className={styles.student_info}>
                 <p>{student?.name}</p>
                 <p>10 YEARS OLD, grade {student.grade}</p>
-                <p>SCA PANTHERS</p>
+                <p>{student.clan_type}</p>
               </div>
             </div>
             <div className={styles.activity_panel}>
