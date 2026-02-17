@@ -26,6 +26,7 @@ const AddClan = () => {
 };
 
   const handleSubmit = async (e) => {
+    if (e) e.preventDefault();
     console.log('formdata:', formData);
     const payload = { 
       clan_name: formData.clan_name,
@@ -34,7 +35,9 @@ const AddClan = () => {
       clan_coins: 0,
       clan_members_count: 0,
       clan_code: formData.clanCode,
-      max_limit: formData.maxLimit };
+      max_limit: parseInt(formData.maxLimit, 10) || 0
+ };
+ 
     try {
       const accessToken = localStorage.getItem("access_token");
       if (!accessToken) {
@@ -47,7 +50,6 @@ const AddClan = () => {
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
-            'Content-Type': 'application/json',
           },
         }
       );
@@ -62,7 +64,7 @@ const AddClan = () => {
     <div className={styles.addclanpage}>
       <div className={styles.title}>NEW CLAN</div>
       <div className={styles.clan_new}>
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className={styles.clan_details}>
             <div className={styles.form_group}>
               <label>CLAN NAME</label>

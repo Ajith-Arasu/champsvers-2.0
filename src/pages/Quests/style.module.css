@@ -72,6 +72,7 @@ input,textarea::placeholder{
   display:flex;
   flex-direction: column;
 }
+
 @media (max-width: 768px) {
   .title {
     font-size: 18px;
