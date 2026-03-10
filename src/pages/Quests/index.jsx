@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './style.module.css';
-import QuestCard from '../../components/QuestCard/QuestCard';
 import AddButton from '../../components/Addbutton/AddButton';
 import PageHeader from '../../components/Header/PageHeader';
 import axios from 'axios';
+import QuestListCard from '../../components/QuestListCard/QuestListCard';
+import QuestBook from '../../components/QuestBook';
 
 const Quests = () =>{ 
   const [quests, setQuests]= useState([]);
@@ -13,10 +14,10 @@ const Quests = () =>{
   const handleClick=(id)=>{
     navigate(`/quests/${id}/questcreation`);
   }
-   const fetchQuests = async () => {
+  const fetchQuests = async () => {
     try {
-      const accessToken = localStorage.getItem("access_token");
-      if (!accessToken) {
+      const text_token= localStorage.getItem("access_token");
+      if (!text_token) {
         console.error("Access token not found");
         return;
 }
@@ -25,7 +26,7 @@ const Quests = () =>{
 });
       const response = await api.get("/api/v1/contests", {
         headers: {
-          Authorization: `Bearer ${accessToken}`,
+          Authorization: `Bearer ${text_token}`, 
         },
         params: {
           contest_type: "MICRO_CONTEST",
@@ -44,30 +45,31 @@ const Quests = () =>{
     fetchQuests();
    },[]);
 
-
-  return(
+   return(
     <div className={styles.questspage}>
       <PageHeader title="QUESTS" dividerwidth="100%">
         <AddButton text="ADD NEW QUEST" onClick={()=>{handleClick(123)}} />
       </PageHeader>
       <div className={styles.quest_gallery}>
         {quests.length > 0 &&
-    Array.from({ length: 10 }).map((_, index) => {
-      const quest = quests[index % quests.length];
-
+  quests.map((quest) => {
       return (
-          <QuestCard
-            key={quest.id}
-            image="https://d1wlhv1hqb6088.cloudfront.net/0798c554-a13a-412f-8143-33ac804cf088/PAGES/MICRO_CONTESTS/IMAGES/medium/questImgNew.jpg"
+             <QuestListCard  
+            key={quest.contest_id}
+            image={`https://d1wlhv1hqb6088.cloudfront.net/0798c554-a13a-412f-8143-33ac804cf088/PAGES/MICRO_CONTESTS/IMAGES/medium/${quest.cr_banner}`}
             titleLine1={quest.category}
             titleLine2={quest.title}
-            description={quest.description}
-    />
+            description={quest.description} 
+
+            />
+          
   );
     })}
 </div>
+      <QuestBook/>
     </div>
   );
  };
+
 
 export default Quests;

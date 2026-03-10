@@ -18,6 +18,8 @@ import StudentProfile from '../pages/Students/studentprofile';
 import ClanDetails from '../pages/Clans/clandetails';
 import AddClan from '../pages/Clans/addclan';
 import QuestCreation from '../pages/Quests/questcreation';
+import QuestBookPage from '../pages/Quests/questbook';
+import QuestBookList from '../pages/Quests/questbooklist';
 
 const AppRoutes = () => {
   return (
@@ -38,6 +40,8 @@ const AppRoutes = () => {
           <Route path="/clans/:id/addclan" element={<AddClan />} />
           <Route path="/quests" element={<Quests />} />
           <Route path="/quests/:id/questcreation" element={<QuestCreation />} />
+          <Route path="/questbook" element={<QuestBookList />} />
+          <Route path="/questbook/create" element={<QuestBookPage />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/activities/comments" element={<Comments />} />

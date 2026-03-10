@@ -60,6 +60,16 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/questbook" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}>
+              <CircleRoundedIcon
+                sx={{
+                  fontSize: 8,
+                  mr: 1,
+                  flexShrink: 0,
+                }} />Quest Book
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/leaderboard" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}>
               <CircleRoundedIcon
                 sx={{

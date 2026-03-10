@@ -18,10 +18,10 @@ const Clans = () => {
   const handleClick=(id)=>{
     navigate(`/clans/${id}/addclan`);
   }
-   const fetchClans = async () => {
+  const fetchClans = async () => {
     try {
-      const accessToken = localStorage.getItem("access_token");
-      if (!accessToken) {
+      const text_token= localStorage.getItem("access_token");
+      if (!text_token) {
         console.error("Access token not found");
         return;
 }
@@ -30,12 +30,11 @@ const Clans = () => {
 });
       const response = await api.get("/api/v1/clans", {
         headers: {
-          Authorization: `Bearer ${accessToken}`,
+          Authorization: `Bearer ${text_token}`,
         },
         params: {
          count: 4,
-          
-        },
+         },
       });
       console.log("API response:", response.data.data);
       setClanCards(response.data.data);

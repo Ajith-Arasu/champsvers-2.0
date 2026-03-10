@@ -1,0 +1,101 @@
+.questcard{
+  width:190px;
+  display: flex;
+  flex-direction: column;
+  padding:10px;
+  border-radius: 30px;
+  background: #D9D9D929;
+  box-shadow: 0px 7px 10px 4px #0000001A;
+}
+.quest_image{
+  width:190px;
+  height:125px;
+  border:1px solid #FFFFFF;
+  border-radius: 30px;
+}
+.card_details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.card_title{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  color:#FFFFFF;
+  font-family: Heavitas;
+  font-weight: 400;
+  font-size: 12px;
+  padding-top:3px;
+  box-shadow: 1.08px 2.16px 8.64px 0px rgba(0, 0, 0, 0.25);
+}
+.card_title span {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.card_description{
+  width:100%;
+  overflow-wrap: break-word;
+  font-family: BeVietnam;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  font-size: 7px;
+  line-height:2.2;
+  text-align: justify;
+  margin-top: 3px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;   
+  overflow: hidden;
+}
+.image_container{
+  height:240px;
+  width:200px;
+  cursor:pointer;
+  overflow: hidden;
+  color:white;
+  align-items: center;
+  border-radius: 25px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  position:relative;
+  box-shadow:
+  rgba(255, 255, 255, 0.35) 0 0 10px inset,
+  rgba(255, 255, 255, 0.5) 0 0 20px inset;
+}
+.previewImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.questname{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-size: 12px;
+  color:#FFFFFF;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .questcard {
+    width: 90%;
+  }
+  .quest_image {
+    width: 100%;
+    height: auto;
+  }
+  .card_description {
+    width: 100%;
+    font-size: 7px;
+  }
+}

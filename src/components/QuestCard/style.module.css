@@ -85,6 +85,10 @@
   color:#FFFFFF;
   text-align: center;
 }
+.form_group{
+  display:flex;
+  gap:60px;
+}
 
 @media (max-width: 768px) {
   .questcard {

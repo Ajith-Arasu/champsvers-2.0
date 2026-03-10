@@ -1,12 +1,7 @@
 .questspage{
-  overflow: visible;
   position:relative;
   border-radius:50px;
   padding:0px 20px;
-  overflow-y: auto;
-}
-.questspage::-webkit-scrollbar {
-  display: none;
 }
 .title_bar{
   display: flex;
@@ -20,6 +15,13 @@
   position: relative;
   padding-left: 15px;
   top:15px;
+}
+.empty_state{
+  margin-top: 35px;
+  padding-left: 15px;
+  font-family: Heavitas;
+  font-size: 15px;
+  color: #FFFFFF;
 }
 
 /*questcreation*/
@@ -71,6 +73,28 @@ input,textarea::placeholder{
 .points{
   display:flex;
   flex-direction: column;
+}
+
+/*Quest Book*/
+.btn_add{
+  width:100px;
+  height:40px;
+  border:none;
+  border-radius: 40px;
+  background: linear-gradient(90deg, rgba(214, 10, 255, 0.9) 0%, rgba(183, 16, 217, 0.54) 100%);
+  padding:5px;
+  display: flex;
+  gap:5px;
+  align-items: center;
+  text-align: center;
+  font-family: Heavitas;
+  font-weight: 400;
+  font-size: 14px;
+  color:#FFFFFF;
+  justify-content: center;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
