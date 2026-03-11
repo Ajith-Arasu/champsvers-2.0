@@ -6,39 +6,63 @@ import Button from '../../components/Button/Button';
 import { login } from '../Api/api'
 
 const IntroCard = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
- 
+  const initialState={
+    username: '',
+    password: '',
+  }
+  const [formData, setFormData] = useState(initialState);
+  const [error, setError] = useState('');
+   
   const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
   
   const handleLogin = async (e) => {
     e.preventDefault();
-  
-    if (username.includes(" ") || password.includes(" ")) {
-      alert("Username and password should not contain any spaces");
+
+    if(!formData.username && !formData.password){
+      setError('Username and Password is required');
       return;
-}
-    const credentials={
-      email:username.trim(),
-      password:password.trim(),
-    };
-    if(!credentials.email || !credentials.password){
-      alert('please enter both username and password');
+    }else if(!formData.username){
+      setError('username is required');
+      return;
+    }else if(!formData.password){
+      setError('password is required');
       return;
     }
+    setError('');
+ 
+    const credentials={
+      email:formData.username.trim(),
+      password:formData.password.trim(),
+    };
+  
+    if (credentials.email.includes(" ") || credentials.password.includes(" ")) {
+      alert("Username and password should not contain any spaces");
+      setFormData(initialState);
+      return;
+}
 
     try {
       const res = await login(credentials);
       console.log('Login Success:', res);
       navigate("/dashboard");
-    }catch (error){
-      if(error.response){
-        console.error('Response Error:',error.response.data);
+    }catch (err){
+      if(err.response){
+        console.error('Response Error:',err.response.data);
         alert("Invalid username and password");
       }else{
-        console.error('Error', error.message);
+        console.error('Error', err.message);
       }
-    };
+    }finally{
+      setFormData(initialState);
+    }
   };
   return (
     <div className={styles.background}>
@@ -63,13 +87,17 @@ const IntroCard = () => {
               <input 
                 type="text"
                 placeholder="USERID"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)} />
+                name="username"
+                value={formData.username}
+                onChange={handleChange} />
+               
               <input
                 type="password"
                 placeholder="PASSWORD"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)} />
+                name="password"
+                value={formData.password}
+                onChange={handleChange} />
+              {error && <p className={styles.error_text}>{error}</p>} 
               <Button type="submit" label="Continue" />
             </form>
           </div>

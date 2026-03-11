@@ -7,7 +7,6 @@ import PageHeader from '../../components/Header/PageHeader';
 import axios from 'axios';
 import QuestListCard from '../../components/QuestListCard/QuestListCard';
 
-
 const Quests = () =>{ 
   const [quests, setQuests]= useState([]);
   const navigate=useNavigate();
@@ -30,9 +29,7 @@ const Quests = () =>{
         },
         params: {
           contest_type: "MICRO_CONTEST",
-        
-          },
-
+        },
       });
       console.log("API response:", response.data.data);
       setQuests(response.data.data);
@@ -43,33 +40,29 @@ const Quests = () =>{
 
   useEffect(()=>{
     fetchQuests();
-   },[]);
+  },[]);
 
-   return(
+  return(
     <div className={styles.questspage}>
       <PageHeader title="QUESTS" dividerwidth="100%">
         <AddButton text="ADD NEW QUEST" onClick={()=>{handleClick(123)}} />
       </PageHeader>
       <div className={styles.quest_gallery}>
         {quests.length > 0 &&
-  quests.map((quest) => {
-      return (
-             <QuestListCard  
-            key={quest.contest_id}
-            image={`https://d1wlhv1hqb6088.cloudfront.net/0798c554-a13a-412f-8143-33ac804cf088/PAGES/MICRO_CONTESTS/IMAGES/medium/${quest.cr_banner}`}
-            titleLine1={quest.category}
-            titleLine2={quest.title}
-            description={quest.description} 
-
-            />
-          
-  );
-    })}
-</div>
-      
+          quests.map((quest) => {  
+            return (
+              <QuestListCard  
+                key={quest.contest_id}
+                image={`https://d1wlhv1hqb6088.cloudfront.net/0798c554-a13a-412f-8143-33ac804cf088/PAGES/MICRO_CONTESTS/IMAGES/medium/${quest.cr_banner}`}
+                titleLine1={quest.category}
+                titleLine2={quest.title}
+                description={quest.description} 
+              />
+            );
+          })}
+      </div>
     </div>
   );
  };
-
 
 export default Quests;

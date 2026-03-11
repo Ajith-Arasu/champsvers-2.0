@@ -14,6 +14,7 @@
   flex-wrap: wrap;
   position: relative;
   padding-left: 15px;
+  padding-bottom: 10px;
   top:15px;
 }
 .empty_state{
@@ -95,6 +96,15 @@ input,textarea::placeholder{
   border-radius: 8px;
   backdrop-filter: blur(4px);
   cursor: pointer;
+}
+
+.display{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-size: 14px;
+  color:#FFFFFF;
+  text-align: left;
+  padding:10px 0px;
 }
 
 @media (max-width: 768px) {
