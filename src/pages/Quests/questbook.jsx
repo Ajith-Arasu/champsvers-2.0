@@ -4,14 +4,15 @@ import styles from './style.module.css';
 import QuestCard from '../../components/QuestCard/QuestCard';
 import Button from '../../components/Button/Button';
 import PageHeader from '../../components/Header/PageHeader';
-import { Radio, RadioGroup, Box, Typography, TextField, Chip } from '@mui/material';
-import { quest_difficultylevels } from '../../utils/const';
+//import { Radio, RadioGroup, Box, Typography, TextField, Chip } from '@mui/material';
+//import { quest_difficultylevels } from '../../utils/const';
+import QuestListCard from '../../components/QuestListCard/QuestListCard';
 
 
 const QuestBookPage = () => {
   const initialQuestState = {
     title: '',
-    description: '',
+    desc: '',
     points: '',
     difficulty_level: '',
     category: '',
@@ -23,10 +24,13 @@ const QuestBookPage = () => {
   const [questData, setQuestData] = useState(initialQuestState);
   const [bannerKey, setBannerKey] = useState('');
   const [uploadData, setUploadData] = useState(null);
-  const [inputValue, setInputValue] = useState('');
+  const [quests, setQuests] = useState([]);
+  const [questId, setQuestId] = useState([]);
+  const [fileExtension, setFileExtension] = useState('');
+  //const [inputValue, setInputValue] = useState('');
  
 
-  const handleAddTag = (e) => {
+ {/*} const handleAddTag = (e) => {
     if (e.key === 'Enter' && inputValue.trim()) {
       e.preventDefault();
       if (questData.tags.length < 5) {
@@ -44,8 +48,17 @@ const QuestBookPage = () => {
       ...prev,
       tags: prev.tags.filter((_, i) => i !== indexToDelete)
     }));
-  };
+  };*/}
 
+  const handleClick = (id)=>{
+    console.log('IDs:',id);
+    setQuestId((prev)=>{
+     const updatedQuestId = [...prev, id];
+      console.log("QuestIDs:",updatedQuestId);
+       return updatedQuestId;
+    });
+  }
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -55,12 +68,12 @@ const QuestBookPage = () => {
     }));
   };
 
-  const minval = questData.l_age !== '' ? parseInt(questData.l_age) : null;
+ {/*} const minval = questData.l_age !== '' ? parseInt(questData.l_age) : null;
   const maxval = questData.h_age !== '' ? parseInt(questData.h_age) : null;
 
-  const isError = minval !== null && maxval !== null && minval > maxval;
+  const isError = minval !== null && maxval !== null && minval > maxval;*/}
 
-  const questAPI = async () => {
+  const questAPI = async (fileExtension) => {
     try {
       const text_token = localStorage.getItem('access_token');
       if (!text_token) {
@@ -77,7 +90,7 @@ const QuestBookPage = () => {
         params: {
           upload_sub_type: 'QUEST_BOOKS',
           type: 'IMAGES',
-          extension:'jpeg',
+          extension: fileExtension,
           upload_type: 'PAGES'
         }
       });
@@ -88,12 +101,37 @@ const QuestBookPage = () => {
     } catch (error) {
       console.error('Error fetching upload URL:', error);
     }
+
+    //Quest collection
+    try{
+      const text_token=localStorage.getItem("access_token");
+      if(!text_token){
+        console.error("Access token not found");
+        return;
+      }
+      const api=axios.create({
+        baseURL:"https://5hxz4ksy26.execute-api.ap-south-1.amazonaws.com/dev",
+      });
+      const getresponse=await api.get("/api/v1/contests",{
+        headers:{
+          Authorization:`Bearer ${text_token}`,
+        },
+        params:{
+          contest_type:"MICRO_CONTEST",
+          },
+   })
+       console.log('API Response:', getresponse.data.data);
+      setQuests(getresponse.data.data);
+    }catch (error){
+      console.error("Error fetching Quests", error);
+    }
   };
 
 
   useEffect(() => {
-    questAPI();
-      }, []);
+    if(fileExtension){
+    questAPI(fileExtension);}
+      }, [fileExtension]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -104,31 +142,22 @@ const QuestBookPage = () => {
     }
 
      const payload={
-          type: "MICRO_CONTEST",
-          work_type: "POST",
-          title: questData.title,
-          description: questData.description,
-          winning_points: Number(questData.points),
-          difficulty_level: Number(quest_difficultylevels[questData.difficulty_level]) || 1,
-          category: questData.category,
-          tags: questData.tags.map(tag=>({name:tag})),
-          ct_banner: bannerKey,
-          cr_banner: bannerKey,
+        title: questData.title,
+        desc: questData.desc,
+        qb_cover: bannerKey,
+        q_ids:questId,
     };
 
-    if (questData.l_age && questData.h_age) {
-      payload.l_age = Number(questData.l_age);
-      payload.h_age = Number(questData.h_age);
-    }
+    console.log('QuestBook:',payload);
 
-    try {
+     try {
       const text_token = localStorage.getItem('access_token');
       if (!text_token) {
         console.error('Access token not found');
         return;
       }
       const postResponse = await axios.post(
-        'https://5hxz4ksy26.execute-api.ap-south-1.amazonaws.com/dev/api/v1/contest',
+        'https://5hxz4ksy26.execute-api.ap-south-1.amazonaws.com/dev/api/v1/quest-book',
         payload,
         {
           headers: {
@@ -164,13 +193,13 @@ const QuestBookPage = () => {
                 type="text"
                 rows="7"
                 cols="30"
-                name="description"
-                value={questData.description}
+                name="desc"
+                value={questData.desc}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className={styles.form_group}>
+           {/* <div className={styles.form_group}>
               <label className={styles.points}>
                 POINTS<span>(30 TO 200)</span>
               </label>
@@ -298,17 +327,36 @@ const QuestBookPage = () => {
                   size="small"
                 />
               </Box>
-            </div>
+            </div>*/}
       
           <div className={styles.form_button}>
             <Button label="SAVE" />
           </div>
+
+          {/*Quest collection*/}
+          <label>QUESTS</label>
+          <div className={styles.quest_gallery}>
+            
+            {quests.length>0 &&
+            quests.map((quest)=>{
+              return(
+                  <QuestListCard onClick={()=>{handleClick(quest.contest_id)}}
+                  selected={questId.includes(quest.contest_id)}
+                  key={quest.contest_id}
+                  image={`https://d1wlhv1hqb6088.cloudfront.net/0798c554-a13a-412f-8143-33ac804cf088/PAGES/MICRO_CONTESTS/IMAGES/medium/${quest.cr_banner}`}
+                  titleLine1={quest.category}
+                  titleLine2={quest.title}
+                  description={quest.description}/>
+          )
+            })}
+          </div>
           </div>
         </form>
+     
         <div className={styles.quest_preview}>
           <p className={styles.text_preview}>PREVIEW</p>
           <div className="quest_card">
-            <QuestCard uploadData={uploadData} />
+            <QuestCard uploadData={uploadData} onFileSelect={setFileExtension} />
             
           </div>
         </div>

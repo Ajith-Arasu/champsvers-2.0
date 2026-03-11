@@ -6,7 +6,7 @@ import AddButton from '../../components/Addbutton/AddButton';
 import PageHeader from '../../components/Header/PageHeader';
 import axios from 'axios';
 import QuestListCard from '../../components/QuestListCard/QuestListCard';
-import QuestBook from '../../components/QuestBook';
+
 
 const Quests = () =>{ 
   const [quests, setQuests]= useState([]);
@@ -66,7 +66,7 @@ const Quests = () =>{
   );
     })}
 </div>
-      <QuestBook/>
+      
     </div>
   );
  };

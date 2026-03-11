@@ -57,7 +57,7 @@ export const upLoadImageVariants = async (file,uploadData) => {
   }
 };
 
-const QuestCard = ({ uploadData}) => {
+const QuestCard = ({ uploadData, onFileSelect}) => {
   
   const fileInputRef = useRef(null);
   const [image, setImage] = useState(null);
@@ -82,7 +82,10 @@ const QuestCard = ({ uploadData}) => {
     console.log('file', file);
     setImage(file);
 
-
+    if(onFileSelect){
+      console.log('Filetype:',file.type);
+      onFileSelect(file.type.split("/")[1]);
+    }
   };
   const upLoadImg = async() =>{
     try{
