@@ -8,6 +8,7 @@ import QuestListCard from '../../components/QuestListCard/QuestListCard';
 
 const QuestBookList = () => {
   const [questBooks, setQuestBooks] = useState([]);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleCreateClick = () => {
@@ -16,6 +17,7 @@ const QuestBookList = () => {
 
   const fetchQuestBooks = async () => {
     try {
+      setLoading(true);
       const text_token = localStorage.getItem('access_token');
       if (!text_token) {
         console.error('Access token not found');
@@ -26,7 +28,7 @@ const QuestBookList = () => {
         baseURL: 'https://5hxz4ksy26.execute-api.ap-south-1.amazonaws.com/dev'
       });
 
-      const response = await api.get('/api/v1/contests', {
+      const response = await api.get('/api/v1/quest-books', {
         headers: {
           Authorization: `Bearer ${text_token}`
         },
@@ -38,8 +40,11 @@ const QuestBookList = () => {
       setQuestBooks(response.data.data || []);
     } catch (error) {
       console.error('Error fetching quest books:', error);
+    }finally{
+      setLoading(false);
     }
   };
+  console.log('QuestBook:', questBooks);
 
   useEffect(() => {
     fetchQuestBooks();
@@ -52,19 +57,16 @@ const QuestBookList = () => {
       </PageHeader>
 
       <div className={styles.quest_gallery}>
-        {questBooks.length > 0 &&
+        {loading ? (<p className={styles.loadingtext}>Loading Quests...</p>):questBooks.length > 0 ? (
           questBooks.map((questBook) => (
             <QuestListCard
-              key={questBook.contest_id}
-              image={`https://d1wlhv1hqb6088.cloudfront.net/0798c554-a13a-412f-8143-33ac804cf088/PAGES/MICRO_CONTESTS/IMAGES/medium/${questBook.cr_banner}`}
-              titleLine1={questBook.category}
-              titleLine2={questBook.title}
-              description={questBook.description}
+              key={questBook.qb_id}
+              image={`https://d1wlhv1hqb6088.cloudfront.net/0798c554-a13a-412f-8143-33ac804cf088/PAGES/QUEST_BOOKS/IMAGES/medium/${questBook.qb_cover}`}
+              titleLine1={questBook.title}
+              description={questBook.desc}
             />
-          ))}
+          ))):(<p className={styles.loadingtext}>No quests Found</p>)}
       </div>
-
-      {questBooks.length === 0 && <div className={styles.empty_state}>No quest books found</div>}
     </div>
   );
 };

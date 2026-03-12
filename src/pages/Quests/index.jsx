@@ -9,12 +9,15 @@ import QuestListCard from '../../components/QuestListCard/QuestListCard';
 
 const Quests = () =>{ 
   const [quests, setQuests]= useState([]);
+  const [loading, setLoading] = useState(false);
+
   const navigate=useNavigate();
   const handleClick=(id)=>{
     navigate(`/quests/${id}/questcreation`);
   }
   const fetchQuests = async () => {
     try {
+      setLoading(true);
       const text_token= localStorage.getItem("access_token");
       if (!text_token) {
         console.error("Access token not found");
@@ -35,6 +38,8 @@ const Quests = () =>{
       setQuests(response.data.data);
     } catch (error) {
       console.error("Error fetching clans:", error);
+    }finally{
+      setLoading(false);
     }
 };
 
@@ -48,7 +53,7 @@ const Quests = () =>{
         <AddButton text="ADD NEW QUEST" onClick={()=>{handleClick(123)}} />
       </PageHeader>
       <div className={styles.quest_gallery}>
-        {quests.length > 0 &&
+        {loading ? (<p className={styles.loadingtext}>Loading Quests...</p>): quests.length > 0 ?(
           quests.map((quest) => {  
             return (
               <QuestListCard  
@@ -59,7 +64,7 @@ const Quests = () =>{
                 description={quest.description} 
               />
             );
-          })}
+          })):(<p className={styles.loadingtext}>No Quests found</p>)}
       </div>
     </div>
   );

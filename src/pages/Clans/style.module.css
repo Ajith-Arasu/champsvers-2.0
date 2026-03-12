@@ -142,17 +142,6 @@ p{
   display: inline-block;
   padding: 0px 20px 5px 5px;
 }
-/*.title::after {
-  content: "";
-  position: absolute;
-  left: 5px;              
-  bottom: 0;
-  height: 0.5px;
-  width: 72rem;           
-  max-width: 1150px;     
-  background-color: #FFFFFF;
-  opacity:30%;
-}*/
 .clan_new{
   display:flex;
   gap:20px;
@@ -172,6 +161,14 @@ p{
   justify-content:center;
   width:1000px;
 }
+.loadingtext{
+  position:relative;
+  font-family: 'Heavitas';
+  font-weight: 400;
+  font-size: 16px;
+  color: #f4f4f4;
+  text-align: left;
+ }
 @media (max-width: 768px) {
   .clanspage {
     padding: 10px;

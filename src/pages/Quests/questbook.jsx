@@ -25,6 +25,7 @@ const QuestBookPage = () => {
   const [questId, setQuestId] = useState([]);
   const [fileExtension, setFileExtension] = useState('');
   const [questError, setQuestError] = useState('');
+  const [loading, setLoading] = useState(false);
   
   const handleClick = (id)=>{
     console.log('IDs:',id);
@@ -76,6 +77,7 @@ const QuestBookPage = () => {
 
    //Quest collection
   useEffect(()=>{
+    setLoading(true);
     const fetchQuests = async()=>{
       try{
         const text_token=localStorage.getItem("access_token");
@@ -98,7 +100,9 @@ const QuestBookPage = () => {
       setQuests(getresponse.data.data);
       }catch (error){
         console.error("Error fetching Quests", error);
-  }
+      }finally{
+        setLoading(false);
+      }
   };
    fetchQuests();
   },[]);
@@ -187,11 +191,20 @@ const QuestBookPage = () => {
             <div className={styles.form_button}>
               <Button label="SAVE" />
             </div>
-
-            {/*Quest collection*/}
+     
+          </div>
+        </form>
+        <div className={styles.quest_preview}>
+          <p className={styles.text_preview}>PREVIEW</p>
+          <div className="quest_card">
+            <QuestCard uploadData={uploadData} onFileSelect={setFileExtension} />
+          </div>
+        </div>
+      </div>
+      {/*Quest collection*/}
             <p className={styles.display}>QUESTS</p>
             <div className={styles.quest_gallery}>
-              {quests.length>0 &&
+              {loading? (<p className={styles.loadingtext}>Loading Quests...</p>):quests.length>0 ? (
                 quests.map((quest)=>{
                   return(
                     <QuestListCard onClick={()=>{handleClick(quest.contest_id)}}
@@ -202,18 +215,9 @@ const QuestBookPage = () => {
                       titleLine2={quest.title}
                       description={quest.description}/>
                     )
-              })}
+              })):(<p className={styles.loadingtext}>No Quests Found</p>)}
             </div>
               {questError && <p className={styles.display}>{questError}</p>}
-          </div>
-        </form>
-        <div className={styles.quest_preview}>
-          <p className={styles.text_preview}>PREVIEW</p>
-          <div className="quest_card">
-            <QuestCard uploadData={uploadData} onFileSelect={setFileExtension} />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

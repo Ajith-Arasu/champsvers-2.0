@@ -9,6 +9,7 @@ import axios from 'axios';
 
 const Clans = () => {
   const [clanCards, setClanCards]=useState([]);
+  const [loading, setLoading] = useState(false);
   const BASE_URL = import.meta.env.VITE_IMAGE_CDN
 
   const navigate=useNavigate();
@@ -20,6 +21,7 @@ const Clans = () => {
   }
   const fetchClans = async () => {
     try {
+      setLoading(true);
       const text_token= localStorage.getItem("access_token");
       if (!text_token) {
         console.error("Access token not found");
@@ -40,6 +42,8 @@ const Clans = () => {
       setClanCards(response.data.data);
     } catch (error) {
       console.error("Error fetching clans:", error);
+    }finally{
+      setLoading(false);
     }
 };
 
@@ -55,7 +59,14 @@ const Clans = () => {
         <AddButton text="ADD NEW CLAN" onClick={()=>{handleClick(123)}} />
       </PageHeader>
       <div className={styles.clanscard}>
-        {clanCards.map((item, id)=>(<ClanCard key={id} image={`${BASE_URL}${item?.created_by}/PAGES/CLANS/IMAGES/medium/${item?.clan_cover?.name}`} onImageClick={()=>{handleImageClick(item.id)}} label={item.clan_name} value={item.clan_members_count} />))}
+        {loading ? (<p className={styles.loadingtext}>Loading Clans...</p>): clanCards.length>0 ? (clanCards.map((item, id)=>{
+            return (
+              <ClanCard key={id}
+                image={`${BASE_URL}${item?.created_by}/PAGES/CLANS/IMAGES/medium/${item?.clan_cover?.name}`} 
+                onImageClick={()=>{handleImageClick(item.id)}} label={item.clan_name} value={item.clan_members_count} />
+            );
+          })
+        ):(<p className={styles.loadingtext}>No clans Found</p>)}
       </div>
     </div>
   );
