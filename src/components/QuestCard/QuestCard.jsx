@@ -111,7 +111,6 @@ const QuestCard = ({ uploadData, onFileSelect}) => {
         <p className={styles.questname} onClick={handleImageClick}>+Questimage</p>
         {image && (<img src={URL.createObjectURL(image)} alt="preview" className={styles.previewImage}  /> )}
         <input ref={fileInputRef} type="file" accept="image/*" style={{ display: "none" }} onChange={handleImageChange} />
-      
       </div>
  </>
     
