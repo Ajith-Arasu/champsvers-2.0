@@ -89,7 +89,8 @@ const LatestWork = () => {
         </div>
       </PageHeader>
       <div className={styles.works_gallery}>
-        {works.map((work)=>{
+        <StudentCreations />
+       {/* {works.map((work)=>{
           return(
              <StudentCreations 
              key={work.uid}
@@ -99,7 +100,7 @@ const LatestWork = () => {
              />
             
          )})
-       }
+       }*/}
       </div>
     </div>
   );
