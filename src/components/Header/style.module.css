@@ -11,6 +11,7 @@
   color: #f4f4f4;
   text-align: left;
   display: inline-block;
+  justify-content: space-between;
 }
 .title_bar {
   display: flex;

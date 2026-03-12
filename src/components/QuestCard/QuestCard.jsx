@@ -1,21 +1,119 @@
+import {useRef, useState, useEffect} from 'react';
 import styles from './style.module.css';
-import questimg from '../../assets/images/questimg.png';
+import {fromBlob } from "image-resize-compress";
 
-const QuestCard = () => {
+
+//upload Image Variants
+export const upLoadImageVariants = async (file,uploadData) => {
+  if(!file || !uploadData) return;
+
+//Grab Extension
+  const extension = file.name.split('.').pop();
+
+//create formats
+  const formats = [
+    {
+      label:"preSignedUrlThumb",
+      quality:30,
+      width:240,
+      height:320,
+    },
+    {
+      label:"preSignedUrlMedium",
+      quality:50,
+      width:720,
+      height:1080,
+    },
+    {
+      label: "preSignedUrlRaw",
+      quality:80,
+      width:1920,
+      height:1080,
+    },
+  ];
+
+  //ResizeBlobs
+  const processUpload = async({label, quality, width, height}) =>{
+    const resizedBlob = await fromBlob(file, quality, width, height, extension);
+    const uploadUrl = uploadData[label];
+
+    if(!uploadUrl) {
+      console.error(`Missing presigned url for ${label}`);
+      return;
+    }
+    const response = await fetch(uploadUrl, {
+      method: 'PUT',
+      body: resizedBlob,
+      headers: {
+        'Content-Type': resizedBlob.type
+      },
+    });
+    if (!response.ok) {
+      throw new Error(`Upload failed for ${label}`);
+    }
+  }
+  for(const format of formats){
+    await processUpload(format);
+  }
+};
+
+const QuestCard = ({ uploadData, onFileSelect}) => {
+  
+  const fileInputRef = useRef(null);
+  const [image, setImage] = useState(null);
+
+  const handleImageClick = () => {
+    fileInputRef.current.click();
+  };
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    
+    if(!file) return;
+
+    const allowedextensions = ["image/jpeg","image/png","image/webp","image/jpg","image/gif","image/svg"];
+
+    if(!allowedextensions.includes(file.type))
+    {
+      alert("Invalid image format");
+      event.target.value=null;
+      return;
+    }
+    console.log('file', file);
+    setImage(file);
+
+    if(onFileSelect){
+      console.log('Filetype:',file.type);
+      onFileSelect(file.type.split("/")[1]);
+    }
+  };
+  const upLoadImg = async() =>{
+    try{
+      if(!image || !uploadData) return;
+
+      await upLoadImageVariants(image, uploadData);
+
+      console.log("All image variants uploaded successfully");
+    } catch (error) {
+      console.error("Error uploading image:", error);
+    }
+  };
+
+  useEffect(() => {
+    if(image && uploadData && uploadData.preSignedUrlRaw && uploadData.preSignedUrlMedium && uploadData.preSignedUrlThumb){
+      upLoadImg();
+    }
+  },[image, uploadData]);
+
   return (
-    <div className={styles.questcard}>
-      <img className={styles.quest_image} src={questimg} alt="questimage"/>
-      <div className={styles.card_details}>
-        <div className={styles.card_title}>
-          <span>A BEAUTIFUL</span>
-          <span>AQUARIAM</span>
-        </div>
-        <div className={styles.card_description}>
-          Draw a fish tank or bowl that you own or wish to own and explain about the breeds of the fishes inside.
-          What food would you feed them? What plants will you plant inside,
-          what other things you will keep inside the  to make it a home for all the fishes.</div>
+  <>
+      <div className={styles.image_container}>
+        <p className={styles.questname} onClick={handleImageClick}>+Questimage</p>
+        {image && (<img src={URL.createObjectURL(image)} alt="preview" className={styles.previewImage}  /> )}
+        <input ref={fileInputRef} type="file" accept="image/*" style={{ display: "none" }} onChange={handleImageChange} />
       </div>
-    </div>
+ </>
+    
   );
 };
 

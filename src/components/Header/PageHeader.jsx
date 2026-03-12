@@ -2,11 +2,14 @@ import React from 'react'
 import styles from './style.module.css';
 import {Divider} from '@mui/material';
 
-const PageHeader = ({title, dividerWidth = '100%', children}) => {
+
+const PageHeader = ({title, dividerWidth = '100%', icon, children}) => {
   return (
     <div className={styles.headerWrapper}>
       <div className={styles.title_bar}>
-        <div className={styles.hometext}>{title}</div>
+        <div className={styles.hometext}>{title}
+          <span>{icon}</span>
+        </div>
         {children}
       </div>
       <Divider

@@ -43,7 +43,7 @@
   justify-content: center;
 }
 .logo {
-  width: 200px;
+  width: 150px;
   margin-bottom: 15px;
 }
 .title {
@@ -123,6 +123,16 @@
   font-size: 16px;
   text-align: justify;
 }
+.error_text{
+  font-family: BeVietnam;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  text-align: left;
+  justify-content: left;
+  color:#FFFFFF;
+}
+
 @media (max-width: 768px) {
 .background {
   height: auto;

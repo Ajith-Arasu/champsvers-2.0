@@ -7,6 +7,7 @@ import StudentCreations from '../../components/Studentcreations/StudentCreations
 import InfoBlock from '../../components/InfoBlock/InfoBlock';
 import AddButton from '../../components/Addbutton/AddButton';
 import PageHeader from '../../components/Header/PageHeader';
+import { useLocation } from 'react-router-dom';
 
 const StudentDetails = () => {
   const navigate = useNavigate();
@@ -14,6 +15,9 @@ const StudentDetails = () => {
   const clanPage = (id)=>{
     navigate(`/clans`);
 };  
+ const { state } = useLocation();
+  const student = state?.student;
+
   const talentList=[
     {value: "315", label: "QUESTS"},
     {value: "730", label: "ARTS"},
@@ -40,9 +44,9 @@ const StudentDetails = () => {
             <div className={styles.user_info}>
               <img className={styles.user_image} src={userimg} alt="userimage"></img>
               <div className={styles.student_info}>
-                <p>Billy joe</p>
-                <p>10 YEARS OLD, grade 5</p>
-                <p>SCA PANTHERS</p>
+                <p>{student?.name}</p>
+                <p>10 YEARS OLD, grade {student.grade}</p>
+                <p>{student.clan_type}</p>
               </div>
             </div>
             <div className={styles.activity_panel}>

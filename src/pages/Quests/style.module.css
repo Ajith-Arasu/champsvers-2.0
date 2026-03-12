@@ -1,33 +1,7 @@
 .questspage{
-  overflow: visible;
   position:relative;
   border-radius:50px;
-  padding:0px 20px;
-  overflow-y: auto;
-}
-.questspage::-webkit-scrollbar {
-  display: none;
-}
-.title {
-  position:relative;
-  font-family: 'Heavitas';
-  font-weight: 400;
-  font-size: 24px;
-  color: #f4f4f4;
-  text-align: left;
-  display: inline-block;
-  padding: 0px 20px 5px 5px;
-}
-.title::after {
-  content: "";
-  position: absolute;
-  left: 5px;              
-  bottom: 0;
-  height: 0.5px;
-  width: 72rem;           
-  max-width: 1200px;     
-  background-color: #FFFFFF;
-  opacity:30%;
+  padding:0px 20px 10px;
 }
 .title_bar{
   display: flex;
@@ -40,7 +14,15 @@
   flex-wrap: wrap;
   position: relative;
   padding-left: 15px;
-  top:30px;
+  padding-bottom: 10px;
+  top:15px;
+}
+.empty_state{
+  margin-top: 35px;
+  padding-left: 15px;
+  font-family: Heavitas;
+  font-size: 15px;
+  color: #FFFFFF;
 }
 
 /*questcreation*/
@@ -82,7 +64,9 @@
   box-shadow: 1.08px 2.16px 8.64px 0px rgba(0, 0, 0, 0.25);
 }
 .quest_card{
-  padding-top:40px;
+   width: 190px;   
+  display: flex;
+  flex-direction: column;
 }
 input,textarea::placeholder{
   text-align: left;
@@ -91,6 +75,45 @@ input,textarea::placeholder{
   display:flex;
   flex-direction: column;
 }
+
+/*Quest Book*/
+.btn_add{
+  width:100px;
+  height:40px;
+  border:none;
+  border-radius: 40px;
+  background: linear-gradient(90deg, rgba(214, 10, 255, 0.9) 0%, rgba(183, 16, 217, 0.54) 100%);
+  padding:5px;
+  display: flex;
+  gap:5px;
+  align-items: center;
+  text-align: center;
+  font-family: Heavitas;
+  font-weight: 400;
+  font-size: 14px;
+  color:#FFFFFF;
+  justify-content: center;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.display{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-size: 14px;
+  color:#FFFFFF;
+  text-align: left;
+  }
+  
+.loadingtext{
+  font-family: Heavitas;
+  font-weight: 400;
+  font-size: 16px;
+  color:#FFFFFF;
+  text-align: left;
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 18px;
