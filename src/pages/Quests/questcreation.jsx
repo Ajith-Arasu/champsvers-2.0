@@ -99,8 +99,8 @@ const QuestCreation = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); 
 
-    if(!bannerKey){
-      alert("Submission Blocked.  Banner is missing");
+    if(!fileExtension || !bannerKey){
+      alert("please upload a quest image before submitting");
       return;
     }
 
