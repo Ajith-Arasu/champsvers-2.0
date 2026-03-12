@@ -104,8 +104,8 @@ input,textarea::placeholder{
   font-size: 14px;
   color:#FFFFFF;
   text-align: left;
-  padding:10px 0px;
-}
+  }
+  
 .loadingtext{
   font-family: Heavitas;
   font-weight: 400;
